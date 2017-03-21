@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="usersListApp">
+<head>
+    <meta charset="UTF-8">
+    <title> User's List</title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <script>
+        // Your app's root module...
+        angular.module("usersListApp", ['ngRoute'], function ($httpProvider) {
+            // Use x-www-form-urlencoded Content-Type
+            $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+
+            /**
+             * The workhorse; converts an object to x-www-form-urlencoded serialization.
+             * @param {Object} obj
+             * @return {String}
+             */
+            var param = function(obj) {
+                var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
+
+                for(name in obj) {
+                    value = obj[name];
+
+                    if(value instanceof Array) {
+                        for(i=0; i<value.length; ++i) {
+                            subValue = value[i];
+                            fullSubName = name + '[' + i + ']';
+                            innerObj = {};
+                            innerObj[fullSubName] = subValue;
+                            query += param(innerObj) + '&';
+                        }
+                    }
+                    else if(value instanceof Object) {
+                        for(subName in value) {
+                            subValue = value[subName];
+                            fullSubName = name + '[' + subName + ']';
+                            innerObj = {};
+                            innerObj[fullSubName] = subValue;
+                            query += param(innerObj) + '&';
+                        }
+                    }
+                    else if(value !== undefined && value !== null)
+                        query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+                }
+
+                return query.length ? query.substr(0, query.length - 1) : query;
+            };
+
+            // Override $http service's default transformRequest
+            $httpProvider.defaults.transformRequest = [function(data) {
+                return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
+            }];
+        })
+            .config(['$routeProvider', function ($routeProvider) {
+                $routeProvider
+                    .when('searchUser',{
+                        templateUrl:"usersList.html"
+                    })
+                    .when('/addUser', {
+                        templateUrl:"views/addUser.html"
+                    })
+                    .when('/updateUser', {
+                        templateUrl: "views/updateUser.html"
+                    })
+                    .otherwise({
+                        templateUrl:"usersList.html"
+                        }
+                    )
+            }])
+    </script>
+
+    <script src="controllers/usersList.js"> </script>
+
+</head>
+
+<body data-ng-controller="usersListCtrl">
+<div ng-view></div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>login </title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="controllers/usersList.js"></script>
+    <script src="controllers/login.js">   </script>
+
+</head>
+
+<body >
+<div ng-view></div>
+<h1> login </h1>
+    <form data-ng-controller="loginCtrl">
+        <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername" placeholder="John" ng-model="user.username">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword" ng-model="user.password">
+        </div>
+
+        <button type="submit" ng-click="Login()" class="btn btn-default">Submit</button>
+    </form>
+
+    <a href="views/addUser.html?">注册</a>
+
+    <div data-ng-controller="UrlCtrl">
+        <button ng-click="jumpToUrl('/hello.html')">Hello</button>
+    </div>
+
+
+
+</body>
+</html>
+
+

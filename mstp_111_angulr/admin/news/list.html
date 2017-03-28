@@ -1,0 +1,51 @@
+
+<div class="wrapper-md"  ng-controller="ListController">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            用户列表
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn m-b-xs btn-sm btn-primary btn-addon" ui-sref="app.news.create()"><i class="fa fa-plus"></i>新增</button>
+        </div>
+        <div class="table-responsive">
+            <table ui-jq="dataTable" class="table table-striped b-t b-light">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>邮箱</th>
+                    <th>性别</th>
+                    <th>居住地</th>
+                    <th>生日</th>
+                    <th>昵称</th>
+                    <th>警员编号</th>
+                    <th>微信号</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="userInfo in haha">
+                    <td>{{$index+1}}</td>
+                    <td>{{userInfo.realName}}</td>
+                    <td>{{userInfo.phone}}</td>
+                    <td>{{userInfo.mail}}</td>
+                    <td>{{userInfo.gender}}</td>
+                    <td>{{userInfo.nativePlace}}</td>
+                    <td>{{userInfo.birthDate}}</td>
+                    <td>{{userInfo.nickName}}</td>
+                    <td>{{userInfo.policeNum}}</td>
+                    <td>{{userInfo.weChat}}</td>
+                    <td>
+                        <a ui-sref="app.news.detail({id:userInfo.id})" class="active"><i class="fa fa-edit"></i></a>
+                        <a ng-click="delete({id:userInfo.id})" class="active"><i class="fa fa-remove"></i></a>
+                        <!--<a ng-click="delete({id:userInfo.id})" href="javascript:void(0)" class="btn btn-danger">删除</a></td>-->
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

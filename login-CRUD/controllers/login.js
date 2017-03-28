@@ -24,7 +24,7 @@ loginApp.run(function ($http) {
 loginApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         // .when('/success', {template:'This is head page！'});
-        .when('/success', {templateUrl:'/usersList.html'})
+        .when('/success', {templateUrl:'/views/usersList.html'})
         .when('/failure', {template:'This is failure page!'});
 }]);
 
@@ -54,10 +54,10 @@ loginApp.controller("loginCtrl",function ($scope ) {
                 isExsit = true;
             }
         }
-        // alert("zhenjia" + isExsit);
+        alert("zhenjia" + isExsit);
         if(isExsit) {
             // $location
-            window.location='usersList.html';
+            window.location='../views/usersList.html';
         }
         else {
             // window.location='index.html';

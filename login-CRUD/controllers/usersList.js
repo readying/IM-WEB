@@ -29,13 +29,13 @@ angular.module("usersListApp")
     .constant("addUrl", addUrl)
     .controller("usersListCtrl", function ($scope, $http, dataUrl, baseUrl, addUrl) {
 
-
-
         $scope.currentUser = null;
 
         $scope.users ={};
 
         $scope.haha = {};
+
+        $scope.user = {};
 
         $http.get(dataUrl)
             .success(function (data) {
@@ -115,14 +115,11 @@ angular.module("usersListApp")
                 method: "POST",
                 data:$scope.user
                 // headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-            })
-                .then(function (response) {
-                    alert(response.data);
-                },
-                    function (response) {
-                        alert(response.data)
-                    }
-                );
+            }).success(function (response) {
+                alert("返回值 "+response.data);
+            }).error(function (response) {
+                alert("返回值 "+response.data);
+            });
             //
             //
             //     jQuery.post(addUrl, { foo: 'bar' }).success(function(response) {
@@ -182,8 +179,8 @@ angular.module("usersListApp")
                 data:$scope.currentUser
 
             }).success(function () {
-                console.log("update success");
-                alert("update user");
+                // console.log("update success");
+                alert("更新成功！");
             });
 
         }

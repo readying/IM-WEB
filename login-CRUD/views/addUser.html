@@ -1,24 +1,21 @@
+<style>
+    .ng-invalid { background-color:lightpink;}
+    .ng-valid { background-color: lightseagreen}
+    span.error{ color: red; font-weight:bold}
+</style>
 
 <h1>Welcome  Register </h1>
 
-<div ng-controller="usersListCtrl">
+<form name="addUserForm" novalidate>
 
-
-   <!--<div class="input-group input-group-sm">-->
-       <!--<span class="input-group-addon"> 姓名</span>-->
-       <!--<input type="text" class="form-control" ng-model="user.realName">-->
-   <!--</div>-->
-
-    <!--<div class="input-group input-group-sm">-->
-             <!--<span class="input-group-addon">-->
-              <!--性别-->
-            <!--</span>-->
-        <!--<input type="text" class="form-control" ng-model="user.gender"-->
-    <!--</div>-->
-
+    <div class="well">
     <div class="form-group">
         <label>真实姓名</label>
-        <input type="text"  class="form-control"  ng-model="user.realName">
+        <!--<span class="input-group-addon"> Name</span>-->
+        <input name="realName" type="text"  class="form-control" ng-model="user.realName" required/>
+        <span class="error" ng-show="addUserForm.realName.$error.required">
+            please enter a name
+        </span>
     </div>
     <div class="form-group">
         <label  >性别</label>
@@ -104,9 +101,10 @@
         <label >家庭住址</label>
         <input type="password" class="form-control" ng-model="user.homeAddress"  >
     </div>
-
-    <button ng-click="addUser(user)" class="btn btn-default">Submit</button>
-</div>
+        <button ng-click="addUser(user)" class="btn btn-default">Submit</button>
+        <a href="#/searchUser" class="btn btn-info ">Back</a>
+    </div>
+</form>
     <!--<div class="form-group">-->
         <!--<label  >办公地址</label>-->
         <!--<input type="text" class="form-control" ng-model="user.officeAddress">-->

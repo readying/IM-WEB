@@ -1,0 +1,23 @@
+<h1> login </h1>
+    <form data-ng-controller="loginCtrl">
+        <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input type="text" class="form-control" id="exampleInputUsername" placeholder="John" ng-model="user.username">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword" ng-model="user.password">
+        </div>
+
+        <button type="submit" ng-click="Login()" class="btn btn-default">Submit</button>
+    </form>
+
+    <a href="addUser.html?">注册</a>
+
+    <!--<div data-ng-controller="UrlCtrl">-->
+        <!--<button ng-click="jumpToUrl('/hello.html')">Hello</button>-->
+    <!--</div>-->
+
+
+

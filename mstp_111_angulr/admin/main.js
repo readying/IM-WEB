@@ -13,8 +13,8 @@ angular.module('app')
 
             // config
             $scope.app = {
-                host: "http://127.0.0.1:9099/v1.0/ma",
-                name: 'Angulr',
+                host: "http://127.0.0.1:9090/v1.0/ma",
+                name: 'Angular',
                 version: '1.3.3',
                 // for chart colors
                 color: {
@@ -72,7 +72,7 @@ angular.module('app')
                 $localStorage.auth = null;
                 $http.defaults.headers.common['Authorization'] = "Basic";
                 $state.go("auth.login");
-            }
+            };
             function isSmartDevice( $window )
             {
                 // Adapted from http://www.detectmobilebrowsers.com

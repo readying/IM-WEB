@@ -385,7 +385,7 @@ angular.module('app')
               })
               .state('app.mail.detail', {
                   url: '/{mailId:[0-9]{1,4}}',
-                  templateUrl: 'tpl/mail.detail.html'
+                  templateUrl: 'tpl/mail.detail-1.html'
               })
               .state('app.mail.compose', {
                   url: '/compose',
@@ -515,7 +515,7 @@ angular.module('app')
                 })
                 .state('music.detail', {
                     url: '/detail',
-                    templateUrl: 'tpl/music.detail.html'
+                    templateUrl: 'tpl/music.detail-1.html'
                 })
                 .state('music.mtv', {
                     url: '/mtv',
@@ -523,7 +523,7 @@ angular.module('app')
                 })
                 .state('music.mtvdetail', {
                     url: '/mtvdetail',
-                    templateUrl: 'tpl/music.mtv.detail.html'
+                    templateUrl: 'tpl/music.mtv.detail-1.html'
                 })
                 .state('music.playlist', {
                     url: '/playlist/{fold}',

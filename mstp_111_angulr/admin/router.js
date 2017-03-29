@@ -86,6 +86,35 @@ app
                         label: '新增',
                     }
                 })
+                .state('app.resource', {
+                    abstract: true,
+                    url: '/resource',
+                    template: '<div ui-view class="fade-in"></div>',
+                    resolve: {
+                        deps: ['$ocLazyLoad',
+                            function( $ocLazyLoad ){
+
+                                return $ocLazyLoad.load('admin/resource/ctrl.js');
+
+                            }]
+                    }
+                })
+                .state('app.resource.list',{
+                    url:'/list',
+                    templateUrl:'admin/resource/list.html',
+                    ncyBreadcrumb:{
+                        parent:'app.dashboard',
+                        label:'资源列表'
+                    }
+                })
+                .state('app.resource.detail',{
+                    url:'/detail/{id}',
+                    templateUrl:'admin/resource/detail.html',
+                    ncyBreadcrumb:{
+                        parent:'app.resource.list',
+                        label:'编辑'
+                    }
+                })
         }
     );
 

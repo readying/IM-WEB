@@ -1,0 +1,36 @@
+<!-- admin/ndetail-1.htmlhtml -->
+<div ng-controller="ResourceDetailController">
+    <div class="wrapper-md" >
+        <div class="panel panel-default">
+            <form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-parse ng-valid-date-disabled" ng-submit="submit()">
+
+                <div class="panel-body">
+                   <div class="form-group">
+                        <label class="col-sm-2 control-label">资源名称</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" ng-model="resource.resourceName" required>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">资源描述</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" ng-model="resource.description">
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">资源类型</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" ng-model="resource.type" >
+                        </div>
+                    </div>
+                </div>
+                <footer class="panel-footer text-right bg-light lter">
+                    <input type="hidden"  ng-if="edit_mode" />
+                    <input type="submit" class="btn btn-success" value="提交"/>
+                </footer>
+            </form>
+        </div>
+    </div>
+</div>

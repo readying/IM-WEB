@@ -1,12 +1,15 @@
 'use strict';
 
 
-app.controller('ListController', function($scope,$modal, $http) {
+app.controller('AuthorityListController', function($scope,$modal, $http) {
     $scope.users ={};
     $scope.haha = {};
+
+    $scope.currentResource = {};
+
         $.ajax({
             type:'get',
-            url:$scope.app.host + "/userinfo/userinfos",
+            url:$scope.app.host + "/authority/authorities",
             success:function (data) {
                 var obj = JSON.parse(data);
                 $scope.users = obj;
@@ -29,13 +32,20 @@ app.controller('ListController', function($scope,$modal, $http) {
        modalInstance.result.then(function () {
            $.ajax({
                type:'get',
-               url:$scope.app.host + "/userinfo/"+id.id+"/delete",
+               url:$scope.app.host + "/authority/"+id.id+"/delete",
                success:function (data) {
-                   $state.go('app.news.list');
+                   $state.go('app.authority.list');
                }
            })
 
        });
+    }
+
+    $scope.update = function (authority) {
+
+        $scope.currentResource = authority;
+
+        alert($scope.currentResource.authorityName);
     }
 
     });
@@ -48,16 +58,18 @@ app.controller('ConfirmController', ['$scope', '$modalInstance', function($scope
         $modalInstance.dismiss('cancel');
     };
 }]);
-app.controller('DetailController', function($rootScope,$scope, $resource, $stateParams,$state) {
+app.controller('AuthorityDetailController', function($rootScope,$scope, $resource, $stateParams,$state) {
     $scope.edit_mode = !!$stateParams.id;
+    $scope.authority = {};
     if($scope.edit_mode){
         $.ajax({
             type:'get',
-            url:$scope.app.host + "/userinfo/"+$stateParams.id,
+            url:$scope.app.host + "/authority/"+$stateParams.id,
             success:function (data) {
                 var obj = JSON.parse(data);
-                $scope.userInfo = obj.data;
-                // $scope.$apply();
+                $scope.authority = obj.data;
+              //  alert($scope.userInfo);
+                $scope.$apply();
 
             }
         })
@@ -67,15 +79,15 @@ app.controller('DetailController', function($rootScope,$scope, $resource, $state
     }
 
     $scope.submit = function(){
-        alert($scope.app.host + "/userinfo/"+$scope.userInfo.id+"/update");
+        alert($scope.app.host + "/authority/"+$scope.authority.id+"/update");
         if($scope.edit_mode){
             $.ajax({
                 type:'post',
-                url:$scope.app.host + "/userinfo/"+$scope.userInfo.id+"/update",
-                data:$scope.userInfo,
+                url:$scope.app.host + "/authority/"+$scope.authority.id+"/update",
+                data:$scope.authority,
                 success:function (data) {
                     alert(data);
-                    $state.go('app.news.list');
+                    $state.go('app.authority.list');
                 }
             })
         }
@@ -83,11 +95,11 @@ app.controller('DetailController', function($rootScope,$scope, $resource, $state
         else{
             $.ajax({
                 type:'post',
-                url:$scope.app.host + "/userinfo/add",
-                data:$scope.userInfo,
+                url:$scope.app.host + "/authority/add",
+                data:$scope.authority,
                 success:function (data) {
                     alert(data);
-                    $state.go('app.news.list');
+                    $state.go('app.authority.list');
                 }
             })
 

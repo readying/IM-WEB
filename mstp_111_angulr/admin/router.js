@@ -49,40 +49,40 @@ app
                         label: '<i class="fa fa-home"></i> 首页'
                     }
                 })
-                .state('app.news', {
+                .state('app.user', {
                     abstract: true,
-                    url: '/news',
+                    url: '/user',
                     template: '<div ui-view class="fade-in"></div>',
                     resolve: {
                         deps: ['$ocLazyLoad',
                             function( $ocLazyLoad ){
 
-                                return $ocLazyLoad.load('admin/news/ctrl.js');
+                                return $ocLazyLoad.load('admin/user/ctrl.js');
 
                             }]
                     }
                 })
-                .state('app.news.list', {
+                .state('app.user.list', {
                     url: '/list?page&search',
-                    templateUrl: 'admin/news/list.html',
+                    templateUrl: 'admin/user/list.html',
                     ncyBreadcrumb: {
                         parent:'app.dashboard',
                         label: '用户列表',
                     }
                 })
-                .state('app.news.detail', {
+                .state('app.user.detail', {
                     url: '/detail/{id}',
-                    templateUrl: 'admin/news/detail.html',
+                    templateUrl: 'admin/user/detail.html',
                     ncyBreadcrumb: {
-                        parent:'app.news.list',
+                        parent:'app.user.list',
                         label: '编辑',
                     }
                 })
-                .state('app.news.create', {
+                .state('app.user.create', {
                     url: '/create',
-                    templateUrl: 'admin/news/detail.html',
+                    templateUrl: 'admin/user/detail.html',
                     ncyBreadcrumb: {
-                        parent:'app.news.list',
+                        parent:'app.user.list',
                         label: '新增',
                     }
                 })
@@ -115,7 +115,7 @@ app
                         label:'编辑'
                     }
                 })
-                .state('app.resource.create',{
+                .state('app.resource.create', {
                     url:'/create',
                     templateUrl:'admin/resource/detail.html',
                     ncyBreadcrumb:{
@@ -123,6 +123,42 @@ app
                         label:'新增',
                     }
                 })
+                .state('app.authority',{
+                    abstract:true,
+                    url:'/authority',
+                    template:'<div ui-view class="fade-in"></div>',
+                    resolve:{
+                        deps:['$ocLazyLoad',
+                            function ($ocLazyLoad) {
+                                return $ocLazyLoad.load('admin/authority/ctrl.js')
+                            }]
+                    }
+                })
+                .state('app.authority.list',{
+                    url:'/list',
+                    templateUrl:'admin/authority/list.html',
+                    ncyBreadcrumb:{
+                        parent:'app.dashboard',
+                        label:'权限列表'
+                    }
+                })
+                .state('app.authority.detail', {
+                    url:'detail/{id}',
+                    templateUrl:'admin/authority/detail.html',
+                    ncyBreadcrumb:{
+                        parent:'app.authority.list',
+                        label:'编辑'
+                    }
+                })
+                .state('app.authority.create',{
+                    url:'/create',
+                    templateUrl:'admin/authority/detail.html',
+                    ncyBreadcrumb:{
+                        parent:'app.authority.list',
+                        label:'新增'
+                    }
+                })
+
         }
     );
 

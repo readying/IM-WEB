@@ -4,7 +4,7 @@
         <div class="panel-heading">
             用户列表
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn m-b-xs btn-sm btn-primary btn-addon" ui-sref="app.news.create()"><i class="fa fa-plus"></i>新增</button>
+            <button class="btn m-b-xs btn-sm btn-primary btn-addon" ui-sref="app.user.create()"><i class="fa fa-plus"></i>新增</button>
         </div>
         <div class="table-responsive">
             <table ui-jq="dataTable" class="table table-striped b-t b-light">
@@ -36,7 +36,7 @@
                     <td>{{userInfo.policeNum}}</td>
                     <td>{{userInfo.weChat}}</td>
                     <td>
-                        <a ui-sref="app.news.detail({id:userInfo.id})" class="active"><i class="fa fa-edit"></i></a>
+                        <a ui-sref="app.user.detail({id:userInfo.id})" class="active"><i class="fa fa-edit"></i></a>
                         <a ng-click="delete({id:userInfo.id})" class="active"><i class="fa fa-remove"></i></a>
                         <!--<a ng-click="delete({id:userInfo.id})" href="javascript:void(0)" class="btn btn-danger">删除</a></td>-->
                     </td>

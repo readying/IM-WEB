@@ -115,6 +115,14 @@ app
                         label:'编辑'
                     }
                 })
+                .state('app.resource.create',{
+                    url:'/create',
+                    templateUrl:'admin/resource/detail.html',
+                    ncyBreadcrumb:{
+                        parent:'app.resource.list',
+                        label:'新增',
+                    }
+                })
         }
     );
 

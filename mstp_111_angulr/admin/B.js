@@ -35,7 +35,7 @@
             // 本地测试
             // clientUrl:"http://localhost:8080/alumniweb/web/",
             // serverUrl:"",
-            domain:"http://127.0.0.1:9099/v1.0/ma",
+            domain:"http://192.168.5.157:9090/v1.0/ma",
             proxy:"/test/proxy.html",
 
             // 正式部署
@@ -46,7 +46,7 @@
                 var that = this;
 
                 xdomain.slaves({
-                    "http://127.0.0.1:9099/v1.0/ma":that.proxy          //这地址能访问到服务器中的proxy.html页面
+                    "http://192.168.5.157:9090/v1.0/ma":that.proxy          //这地址能访问到服务器中的proxy.html页面
                 });
 
                 if($.isFunction(callback)){

@@ -68,6 +68,16 @@ app
                     ncyBreadcrumb: {
                         parent:'app.dashboard',
                         label: '用户列表',
+                    },
+                    resolve: {
+                        deps: ['$ocLazyLoad',
+                            function( $ocLazyLoad ){
+                                return $ocLazyLoad.load('ui.select').then(
+                                    function(){
+                                        return $ocLazyLoad.load('js/controllers/select.js');
+                                    }
+                                );
+                            }]
                     }
                 })
                 .state('app.user.detail', {

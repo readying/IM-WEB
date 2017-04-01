@@ -39,7 +39,26 @@ app.controller('AuthorityListController', function($scope,$modal, $http) {
            })
 
        });
-    }
+    };
+
+   $scope.resource = function (id) {
+       var temp = $rootscope.$new();
+       temp.data = {
+           authority: id.id,
+           app: $scope.app
+       };
+       var modalInstance = $modal.open({
+           templateUrl: 'admin/authority/resource.html',
+           controller: 'AuthorityResourceController',
+           scope:temp
+       });
+      modalInstance.result.then(function () {
+
+      })
+   }
+
+
+
 
     $scope.update = function (authority) {
 
@@ -58,6 +77,17 @@ app.controller('ConfirmController', ['$scope', '$modalInstance', function($scope
         $modalInstance.dismiss('cancel');
     };
 }]);
+
+app.controller('AuthorityResourceController',['$scope', '$modalInstance',function ($scope, $modalInstance) {
+    var data = $scope.data;
+
+    // 所有资源信息
+    $.ajax({
+        type:'get',
+        url:data.app.host
+    })
+}])
+
 app.controller('AuthorityDetailController', function($rootScope,$scope, $resource, $stateParams,$state) {
     $scope.edit_mode = !!$stateParams.id;
     $scope.authority = {};

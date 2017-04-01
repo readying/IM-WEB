@@ -1,35 +1,56 @@
 <!-- admin/ndetail-1.htmlhtml -->
-<div ng-controller="AuthorityDetailController">
-    <div class="wrapper-md" >
-        <div class="panel panel-default">
-            <form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-parse ng-valid-date-disabled" ng-submit="submit()">
+<style>
+    .ng-invalid {
+        background-color: lightpink;
+    }
 
-                <div class="panel-body">
-                   <div class="form-group">
-                        <label class="col-sm-2 control-label">权限名称</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="authority.authorityName" required>
+    .ng-valid {
+        background-color: lightseagreen ;
+    }
+
+    span.error {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<div ng-controller="AuthorityDetailController">
+    <div class="wrapper-md">
+        <div class="panel panel-default">
+            <form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required
+             ng-valid-parse ng-valid-date-disabled" name="CreatAuthorityForm" ng-submit="submit()">
+                <div class="well">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">权限名称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"
+                                       ng-model="authority.authorityName" name="authorityName" required>
+                                <span class="error" ng-show="CreateAuthorityForm.authorityName.$error.required">
+                                请输入名称
+                            </span>
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">权限描述</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="authority.description">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">创建时间</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="authority.createTime">
+                            </div>
                         </div>
                     </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">权限描述</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="authority.description">
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">创建时间</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="authority.createTime" >
-                        </div>
-                    </div>
+                    <footer class="panel-footer text-right bg-light lter">
+                        <input type="hidden" ng-if="edit_mode"/>
+                        <input type="submit" class="btn btn-success" value="提交"/>
+                    </footer>
                 </div>
-                <footer class="panel-footer text-right bg-light lter">
-                    <input type="hidden"  ng-if="edit_mode" />
-                    <input type="submit" class="btn btn-success" value="提交"/>
-                </footer>
             </form>
         </div>
     </div>

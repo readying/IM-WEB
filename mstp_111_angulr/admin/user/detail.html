@@ -1,91 +1,115 @@
 <!-- admin/ndetail-1.htmlhtml -->
-<div ng-controller="DetailController">
-    <div class="wrapper-md" >
-        <div class="panel panel-default">
-            <form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required ng-valid-parse ng-valid-date-disabled" ng-submit="submit()">
+<style>
+    /*.ng-valid {*/
+        /*background-color: lightgray;*/
+    /*}*/
 
-                <div class="panel-body">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">姓名</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.realName" required>
+    span.error {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<div ng-controller="DetailController">
+    <div class="wrapper-md">
+        <div class="panel panel-default">
+            <form class="form-horizontal ng-pristine ng-valid ng-valid-date ng-valid-required
+            ng-valid-parse ng-valid-date-disabled" name="CreateUserForm" ng-submit="submit()" novalidate>
+                <div class="well">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">姓名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"
+                                       ng-model="userInfo.realName" name="realName" required>
+                                <span class="error" ng-show="CreateUserForm.realName.$error.required">
+                                    请输入用户名
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">电话</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.phone"
+                                ng-minlength="5">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">邮箱</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control"
+                                       ng-model="userInfo.mail" name="mail" required>
+                                <span class="error "
+                                      ng-show="CreateUserForm.mail.$error.required">
+                                    请输入正确的邮箱
+                                </span>
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">部门</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.org">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">职称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.station">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">性别</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.gender">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">民族</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.nation">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">籍贯</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.nativePlace">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">生日</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.birthDate">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">昵称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.nickName">
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">警号</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="userInfo.policeNum">
+                            </div>
                         </div>
                     </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">电话</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.phone">
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">邮箱</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.mail" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">部门</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.org" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">职称</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.station" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">性别</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.gender" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">民族</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.nation" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">籍贯</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.nativePlace" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">生日</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.birthDate" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">昵称</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.nickName" >
-                        </div>
-                    </div>
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">警号</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" ng-model="userInfo.policeNum" >
-                        </div>
-                    </div>
+                    <footer class="panel-footer text-right bg-light lter">
+                        <input type="hidden" ng-if="edit_mode"/>
+                        <input type="submit" class="btn btn-success" value="提交"/>
+                    </footer>
                 </div>
-                <footer class="panel-footer text-right bg-light lter">
-                    <input type="hidden"  ng-if="edit_mode" />
-                    <input type="submit" class="btn btn-success" value="提交"/>
-                </footer>
             </form>
         </div>
     </div>

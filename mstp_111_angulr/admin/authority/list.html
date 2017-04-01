@@ -1,10 +1,11 @@
-
-<div class="wrapper-md"  ng-controller="AuthorityListController">
+<div class="wrapper-md" ng-controller="AuthorityListController">
     <div class="panel panel-default">
         <div class="panel-heading">
-           权限列表
+            权限列表
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn m-b-xs btn-sm btn-primary btn-addon" ui-sref="app.authority.create()"><i class="fa fa-plus"></i>新增</button>
+            <button class="btn m-b-xs btn-sm btn-primary btn-addon" ui-sref="app.authority.create()"><i
+                    class="fa fa-plus"></i>新增
+            </button>
         </div>
         <div class="table-responsive">
             <table ui-jq="dataTable" class="table table-striped b-t b-light">
@@ -27,6 +28,7 @@
                         <a ui-sref="app.authority.detail({id:item.id})" class="active"><i class="fa fa-edit"> </i></a>
                         <a ng-click="delete({id:item.id})" class="active"><i class="fa fa-remove"></i></a>
                         <!--<a ng-click="delete({id:item.id})" href="javascript:void(0)" class="btn btn-danger">删除</a></td>-->
+                        <a ng-click="resource({id:item.id})" class="active"><i class="fa fa-user"></i></a>
                     </td>
                 </tr>
                 </tbody>

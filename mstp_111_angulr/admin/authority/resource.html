@@ -1,0 +1,30 @@
+
+<div class="modal-header">
+    <h4>资源列表</h4>
+</div>
+<div class="modal-body">
+    <div class="table-responsive">
+        <table  class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+                <th>资源名称</th>
+                <th>资源简介</th>
+                <th>资源路径</th>
+                <th>资源级别</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in resources">
+                <td>{{item.resourceName}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.url}}</td>
+                <td>{{item.level}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

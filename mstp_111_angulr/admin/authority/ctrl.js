@@ -1,7 +1,7 @@
 'use strict';
 
 
-app.controller('AuthorityListController', function($scope,$modal, $http) {
+app.controller('AuthorityListController', function($rootScope, $scope,$modal, $http) {
     $scope.users ={};
     $scope.haha = {};
 
@@ -42,22 +42,20 @@ app.controller('AuthorityListController', function($scope,$modal, $http) {
     };
 
    $scope.resource = function (id) {
-       var temp = $rootscope.$new();
+       var temp = $rootScope.$new();
        temp.data = {
-           authority: id.id,
+           authorityId: id.id,
            app: $scope.app
        };
        var modalInstance = $modal.open({
            templateUrl: 'admin/authority/resource.html',
+           // templateUrl:'admin/confirm.html',
            controller: 'AuthorityResourceController',
            scope:temp
        });
       modalInstance.result.then(function () {
-
-      })
-   }
-
-
+      });
+   };
 
 
     $scope.update = function (authority) {
@@ -81,11 +79,25 @@ app.controller('ConfirmController', ['$scope', '$modalInstance', function($scope
 app.controller('AuthorityResourceController',['$scope', '$modalInstance',function ($scope, $modalInstance) {
     var data = $scope.data;
 
-    // 所有资源信息
+    // 查询权限所具有的所有资源信息
     $.ajax({
         type:'get',
-        url:data.app.host
-    })
+        url:data.app.host+"/resourceAuthority/"+ data.authorityId,
+        success:function (data) {
+            var obj = JSON.parse(data);
+            $scope.resources = obj.data;
+
+        }
+    });
+
+    $scope.ok = function () {
+        $modalInstance.dismiss('cancel');
+    }
+    $scope.cancel = function () {
+        $modalInstance.close();
+    }
+
+
 }])
 
 app.controller('AuthorityDetailController', function($rootScope,$scope, $resource, $stateParams,$state) {

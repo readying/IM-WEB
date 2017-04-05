@@ -35,8 +35,8 @@ app.controller('ListController', function($rootScope,$scope,$modal) {
     }
 
     $scope.account=function(id){
-        var scope = $rootScope.$new();
-        scope.data = {
+        var _scope = $rootScope.$new();
+        _scope.data = {
             userid:id.id,
             app:$scope.app
         }
@@ -44,7 +44,7 @@ app.controller('ListController', function($rootScope,$scope,$modal) {
         var modalInstance = $modal.open({
             templateUrl: 'admin/user/account.html',
             controller: 'AccountController',
-            scope:scope
+            scope:_scope
         });
         modalInstance.result.then(function () {
         });
@@ -63,6 +63,8 @@ app.controller('ConfirmController', ['$scope', '$modalInstance', function($scope
 
 app.controller('AccountController', ['$scope', '$modalInstance', function($scope, $modalInstance){
     var data = $scope.data;
+
+    console.log(data.userid);
 
 
 

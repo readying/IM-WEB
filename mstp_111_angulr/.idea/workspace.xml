@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="76965490-324e-4feb-ae2f-4c46792eeba9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user/account.html" afterPath="$PROJECT_DIR$/admin/user/account.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -467,7 +466,7 @@
       <workItem from="1491010229534" duration="728000" />
       <workItem from="1491011006549" duration="27000" />
       <workItem from="1491011051380" duration="49000" />
-      <workItem from="1491352203371" duration="2403000" />
+      <workItem from="1491352203371" duration="2435000" />
     </task>
     <task id="LOCAL-00001" summary="修改资源的新增功能">
       <created>1490836770237</created>
@@ -483,14 +482,21 @@
       <option name="project" value="LOCAL" />
       <updated>1491038226577</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="workplace">
+      <created>1491355639899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1491355639899</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185711000" />
+    <option name="totallyTimeSpent" value="185743000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14957717" sideWeight="0.621195" order="0" side_tool="false" content_ui="combo" />
@@ -521,7 +527,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改资源的新增功能" />
     <MESSAGE value="增加author-resource关联-初步" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加author-resource关联-初步" />
+    <MESSAGE value="workplace" />
+    <option name="LAST_COMMIT_MESSAGE" value="workplace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

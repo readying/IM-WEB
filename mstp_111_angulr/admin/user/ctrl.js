@@ -132,8 +132,8 @@ app.controller('DetailController', function($rootScope,$scope, $resource, $state
     }
 
     $scope.submit = function(){
-        alert($scope.app.host + "/userinfo/"+$scope.userInfo.id+"/update");
         if($scope.edit_mode){
+            alert($scope.app.host + "/userinfo/"+$scope.userInfo.id+"/update");
             $.ajax({
                 type:'post',
                 url:$scope.app.host + "/userinfo/"+$scope.userInfo.id+"/update",

@@ -2,8 +2,14 @@ package com.gd.controller.userinfo;
 
 import com.gd.annoation.Log;
 import com.gd.annoation.RequestLimit;
+import com.gd.domain.account.Account;
 import com.gd.domain.base.BaseModel;
+import com.gd.domain.department.Department;
+import com.gd.domain.role.Role;
 import com.gd.domain.userinfo.UserInfo;
+import com.gd.entity.UserinfoAccountRole;
+import com.gd.entity.UserinfoAccountRoleMessage;
+import com.gd.service.account_role.IAccountRoleService;
 import com.gd.service.userinfo.IUserInfoService;
 import com.google.gson.Gson;
 import io.swagger.annotations.ApiOperation;
@@ -14,9 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.security.Principal;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Administrator on 2017/3/7.
@@ -28,6 +32,8 @@ import java.util.Map;
 public class UserInfoController {
     @Autowired
     private IUserInfoService userInfoService;
+    @Autowired
+    private IAccountRoleService accountRoleService;
     @RequestMapping(value = "/userinfos",method = RequestMethod.GET)
    // @RequestLimit(count = 1,limitTime = 2000)
     //@Log(name = "获取所有用户信息")
@@ -145,6 +151,84 @@ public class UserInfoController {
             resultMap.put("code", resultCode);
             resultMap.put("data", resultSuccess);
         }
+        return gson.toJson(resultMap);
+    }
+
+    @RequestMapping(value = "/{id}/accounts",method = RequestMethod.GET)
+    // @RequestLimit(count = 1,limitTime = 2000)
+    //@Log(name = "查看用户信息")
+    @ApiOperation(value = "查看用户所有账户及角色信息", httpMethod = "GET", notes = "查看用户所有账户及角色信息")
+    public String showAccountsById(Principal principal, HttpServletRequest request, HttpServletResponse response,@PathVariable String id){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String, Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+        List<Account> accountList  = this.userInfoService.queryAccountForObjectById(id);
+        List<UserinfoAccountRoleMessage> userinfoAccountRoleMessageList = new ArrayList<UserinfoAccountRoleMessage>();
+        for(Account account:accountList){
+            BaseModel baseModel = new BaseModel();
+            baseModel.setId(account.getId());
+            List<Role> roleList = this.accountRoleService.queryRoleForAccount(baseModel);
+            List<UserinfoAccountRole> userinfoAccountRoleList = new ArrayList<UserinfoAccountRole>();
+            for(Role role:roleList){
+                userinfoAccountRoleList.add(new UserinfoAccountRole(role.getId(),role.getRoleName()));
+            }
+            UserinfoAccountRoleMessage userinfoAccountRoleMessage = new UserinfoAccountRoleMessage(account.getId(),account.getUserName(),userinfoAccountRoleList);
+            userinfoAccountRoleMessageList.add(userinfoAccountRoleMessage);
+        }
+        resultMap.put("code", "0000");
+        resultMap.put("data", userinfoAccountRoleMessageList);
+
+        return gson.toJson(resultMap);
+    }
+
+    @RequestMapping(value = "/{id}/exitDepartment",method = RequestMethod.GET)
+    @ApiOperation(value = "用户退出部门", httpMethod = "GET", notes = "用户退出部门")
+    public String exitDepartment(Principal principal,HttpServletRequest request,HttpServletResponse response,@PathVariable String id,@RequestParam String departmentId){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String,Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+        String resultSuccess = "success";
+        String resultCode = "0000";
+        try {
+            this.userInfoService.exitDepartment(id,departmentId);
+        }catch (Exception e){
+            resultCode="0001";
+            resultSuccess="faild";
+        }finally {
+            resultMap.put("code", resultCode);
+            resultMap.put("data", resultSuccess);
+        }
+        return gson.toJson(resultMap);
+    }
+
+    @RequestMapping(value = "/{id}/friend",method = RequestMethod.GET)
+    @ApiOperation(value = "查询用户的好友", httpMethod = "GET", notes = "查询用户的好友")
+    public String findUserFriend(Principal principal,HttpServletRequest request,HttpServletResponse response,@PathVariable String id){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String,Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+        List<UserInfo> friendList = this.userInfoService.findUserFriend(id);
+        resultMap.put("code","0000");
+        resultMap.put("data",friendList);
+        return gson.toJson(resultMap);
+    }
+    @RequestMapping(value = "/{id}/rootDepartment",method = RequestMethod.GET)
+    @ApiOperation(value = "查询用户的顶级公司", httpMethod = "GET", notes = "查询用户的顶级公司")
+    public String queryRootDepartmentForUser(Principal principal,HttpServletRequest request,HttpServletResponse response,@PathVariable String id){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String,Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+        Department department = this.userInfoService.queryRootDepartmentForUser(id);
+        resultMap.put("code","0000");
+        resultMap.put("data",department);
         return gson.toJson(resultMap);
     }
 }

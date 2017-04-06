@@ -3,6 +3,7 @@ package com.gd.dao.account;
 import com.gd.domain.account.Account;
 import com.gd.domain.authority.Authority;
 import com.gd.domain.base.BaseModel;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -78,4 +79,7 @@ public interface IAccountDao {
     //查询最大排序编号,先将查询的字符串orderNum转换成int找最大值，再将字符串转换成int
     @Select("select CONCAT(MAX(cast(ordernum as UNSIGNED INTEGER))+1,'') from sys_account")
     String queryMaxOrderNum();
+    //重置密码
+    @Update("UPDATE sys_account set password=#{passWord},salt=#{salt} WHERE id =#{id}")
+    void resetPassword(Account account);
 }

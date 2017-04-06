@@ -35,4 +35,6 @@ public interface IAccountService {
     void updateForObject(BaseModel baseModel);
     //删除账户
     void deleteForObject(BaseModel baseModel);
+    //重置密码
+    void resetPassword(Account account);
 }

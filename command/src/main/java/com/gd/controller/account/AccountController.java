@@ -201,4 +201,30 @@ public class AccountController {
         }
         return gson.toJson(resultMap);
     }
+
+
+    @RequestMapping(value = "/{id}/resetPassword",method = RequestMethod.POST)
+    @ApiOperation(value = "重置密码", httpMethod = "POST", notes = "重置密码")
+    public String resetPassword(Principal principal,HttpServletRequest request,HttpServletResponse response,@PathVariable String id,@RequestParam String password){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","POST"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String,Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+        Account account = new Account();
+        account.setId(id);
+        account.setPassWord(password);
+        String resultSuccess = "success";
+        String resultCode = "0000";
+        try {
+            this.accountService.resetPassword(account);
+        }catch (Exception e){
+            resultCode="0001";
+            resultSuccess="faild";
+        }finally {
+            resultMap.put("code", resultCode);
+            resultMap.put("data", resultSuccess);
+        }
+        return gson.toJson(resultMap);
+    }
 }

@@ -51,4 +51,9 @@ public class AccountRoleServiceImpl implements IAccountRoleService {
     public void removeRoleForAccount(String id, List<String> roleIds) {
         this.accountRoleDao.removeRoleForAccount(id,roleIds);
     }
+
+    @Override
+    public List<Role> queryRolesForAccountList(List<String> accountIds) {
+        return this.accountRoleDao.queryRolesForAccountList(accountIds);
+    }
 }

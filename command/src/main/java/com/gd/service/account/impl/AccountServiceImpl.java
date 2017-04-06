@@ -70,9 +70,11 @@ public class AccountServiceImpl implements IAccountService {
         baseModel.setUpdateTime(TimeUtils.getCurrentTime());
         baseModel.setOrderNum(accountDao.queryMaxOrderNum());
         if(baseModel instanceof Account){
+            //获取长度为6的随机字符串
             String randomSalt = MakeFixLenthStringUtils.getFixLenthString(6);
             ((Account) baseModel).setSalt(randomSalt);
             String currPassWord = ((Account) baseModel).getPassWord();
+            //设置盐加密密码
             String usePassWord =new Md5PasswordEncoder().encodePassword(currPassWord,randomSalt);
             ((Account) baseModel).setPassWord(usePassWord);
         }
@@ -89,5 +91,17 @@ public class AccountServiceImpl implements IAccountService {
     public void deleteForObject(BaseModel baseModel) {
         baseModel.setUpdateTime(TimeUtils.getCurrentTime());
         this.accountDao.deleteForObject(baseModel);
+    }
+
+    @Override
+    public void resetPassword(Account account) {
+        //获取长度为6的随机字符串
+        String randomSalt = MakeFixLenthStringUtils.getFixLenthString(6);
+        account.setSalt(randomSalt);
+        String currPassWord = account.getPassWord();
+        //设置盐加密密码
+        String usePassWord =new Md5PasswordEncoder().encodePassword(currPassWord,randomSalt);
+        account.setPassWord(usePassWord);
+        this.accountDao.resetPassword(account);
     }
 }

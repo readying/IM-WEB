@@ -31,4 +31,6 @@ public interface IAccountRoleService {
     void insertRoleForAccount(String id,List roleIds);
     //移除账户的角色信息
     void removeRoleForAccount(String id,List<String> roleIds);
+    //查询多个account的角色列表
+    List<Role> queryRolesForAccountList(List<String> accountIds);
 }

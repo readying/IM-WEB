@@ -70,4 +70,17 @@ public interface IAccountRoleDao {
             "</script>"
     })
     void removeRoleForAccount(@Param("id") String id,@Param("roleIds") List<String> roleIds);
+
+    //查询多个账户的角色集合
+    @Select({
+            "<script>",
+            "SELECT sr.* FROM sys_role sr " +
+                    "LEFT JOIN sys_account_role sar ON sr.`ID`=sar.`ROLEID` " +
+                    "WHERE sar.`ACCOUNTID` IN ",
+            "<foreach  collection='accountIds' item='accountId' open='(' separator=',' close=')'>",
+            "#{accountId,jdbcType=VARCHAR}",
+            "</foreach>",
+            "</script>"
+    })
+    List<Role> queryRolesForAccountList(@Param("accountIds") List<String> accountIds);
 }

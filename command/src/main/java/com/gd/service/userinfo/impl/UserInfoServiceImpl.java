@@ -1,7 +1,9 @@
 package com.gd.service.userinfo.impl;
 
 import com.gd.dao.userinfo.IUserInfoDao;
+import com.gd.domain.account.Account;
 import com.gd.domain.base.BaseModel;
+import com.gd.domain.department.Department;
 import com.gd.domain.userinfo.UserInfo;
 import com.gd.service.userinfo.IUserInfoService;
 import com.gd.util.TimeUtils;
@@ -49,5 +51,25 @@ public class UserInfoServiceImpl implements IUserInfoService {
     @Override
     public UserInfo queryForObjectById(String id) {
         return userInfoDao.queryForObjectById(id);
+    }
+
+    @Override
+    public List<Account> queryAccountForObjectById(String id) {
+        return userInfoDao.queryAccountForObjectById(id);
+    }
+
+    @Override
+    public void exitDepartment(String id, String departmentId) {
+        this.userInfoDao.exitDepartment(id,departmentId);
+    }
+
+    @Override
+    public List<UserInfo> findUserFriend(String id) {
+        return this.userInfoDao.findUserFriend(id);
+    }
+
+    @Override
+    public Department queryRootDepartmentForUser(String id) {
+        return this.userInfoDao.queryRootDepartmentForUser(id);
     }
 }

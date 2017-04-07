@@ -1,0 +1,60 @@
+
+<h1>Welcome  Register </h1>
+
+<div>
+    <div class="form-group">
+        <label>真实姓名</label>
+        <input type="text"  class="form-control"  ng-model="currentUser.realName">
+    </div>
+    <div class="form-group">
+        <label  >性别</label>
+        <input type="text" class="form-control" ng-model="currentUser.gender" >
+    </div>
+    <div class="form-group">
+        <label  >电话</label>
+        <input type="text" class="form-control" ng-model="currentUser.phone">
+    </div>
+
+    <div class="form-group">
+        <label  >邮箱</label>
+        <input type="text" class="form-control" ng-model="currentUser.mail" >
+    </div>
+    <div class="form-group">
+        <label  >部门</label>
+        <input type="text" class="form-control" ng-model="currentUser.org">
+    </div>
+    <div class="form-group">
+        <label  >职称</label>
+        <input type="text" class="form-control" ng-model="currentUser.station">
+    </div>
+
+    <div class="form-group">
+        <label  >民族</label>
+        <input type="text" class="form-control" ng-model="currentUser.nation" >
+    </div>
+
+    <div class="form-group">
+        <label >籍贯</label>
+        <input type="text" class="form-control" ng-model="currentUser.nativePlace">
+    </div>
+
+    <div class="form-group">
+        <label  >生日</label>
+        <input type="text" class="form-control" ng-model="currentUser.birthDate">
+    </div>
+    <div class="form-group">
+        <label  >政治面貌</label>
+        <input type="text" class="form-control" ng-model="currentUser.politicalStatus">
+    </div>
+    <div class="form-group">
+        <label  >婚姻状况</label>
+        <input type="text" class="form-control" ng-model="currentUser.maritalStatus" >
+    </div>
+    <div class="form-group">
+        <label >昵称</label>
+        <input type="text" class="form-control"  ng-model="currentUser.nickName">
+    </div>
+
+    <button ng-click="saveEdit(currentUser)" class="btn btn-default">Update</button>
+    <a href="#/searchUser" class="btn btn-info ">Back</a>
+</div>

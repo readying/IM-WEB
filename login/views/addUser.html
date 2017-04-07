@@ -1,0 +1,128 @@
+<style>
+    .ng-invalid { background-color:lightpink;}
+    .ng-valid { background-color: lightseagreen}
+    span.error{ color: red; font-weight:bold}
+</style>
+
+<h1>Welcome  Register </h1>
+
+<form name="addUserForm" novalidate>
+
+    <div class="well">
+    <div class="form-group">
+        <label>真实姓名</label>
+        <!--<span class="input-group-addon"> Name</span>-->
+        <input name="realName" type="text"  class="form-control" ng-model="user.realName" required/>
+        <span class="error" ng-show="addUserForm.realName.$error.required">
+            please enter a name
+        </span>
+    </div>
+    <div class="form-group">
+        <label  >性别</label>
+        <input type="text" class="form-control" ng-model="user.gender" >
+    </div>
+    <div class="form-group">
+        <label  >电话</label>
+        <input type="text" class="form-control" ng-model="user.phone">
+    </div>
+
+    <div class="form-group">
+        <label  >邮箱</label>
+        <input type="text" class="form-control" ng-model="user.mail" >
+    </div>
+    <div class="form-group">
+        <label  >部门</label>
+        <input type="text" class="form-control" ng-model="user.org">
+    </div>
+    <div class="form-group">
+        <label  >职称</label>
+        <input type="text" class="form-control" ng-model="user.station">
+    </div>
+
+    <div class="form-group">
+        <label  >民族</label>
+        <input type="text" class="form-control" ng-model="user.nation" >
+    </div>
+
+    <div class="form-group">
+    <label >籍贯</label>
+    <input type="text" class="form-control" ng-model="user.nativePlace">
+    </div>
+
+    <div class="form-group">
+        <label  >生日</label>
+        <input type="text" class="form-control" ng-model="user.birthDate">
+    </div>
+    <div class="form-group">
+        <label  >政治面貌</label>
+        <input type="text" class="form-control" ng-model="user.politicalStatus">
+    </div>
+    <div class="form-group">
+        <label  >婚姻状况</label>
+        <input type="text" class="form-control" ng-model="user.maritalStatus" >
+    </div>
+    <div class="form-group">
+        <label >昵称</label>
+        <input type="text" class="form-control"  ng-model="user.nickName">
+    </div>
+    <div class="form-group">
+        <label  >头像</label>
+        <input type="text" class="form-control" ng-model="user.picture" >
+    </div>
+    <div class="form-group">
+        <label  >警号</label>
+        <input type="text" class="form-control" ng-model="user.policeNum" >
+    </div>
+    <div class="form-group">
+        <label  >身份证号</label>
+        <input type="text" class="form-control" ng-model="user.identityCode">
+    </div>
+    <div class="form-group">
+        <label  >二维码</label>
+        <input type="text" class="form-control" ng-model="user.qr" >
+    </div>
+    <div class="form-group">
+        <label >qq号</label>
+        <input type="text" class="form-control"  ng-model="user.qq">
+    </div>
+    <div class="form-group">
+        <label >微信号</label>
+        <input type="text" class="form-control"  ng-model="user.weChat">
+    </div>
+    <div class="form-group">
+        <label  >职务代码</label>
+        <input type="text" class="form-control" ng-model="user.jobCode" >
+    </div>
+    <div class="form-group">
+        <label >个性签名</label>
+        <input type="text" class="form-control" ng-model="user.autoGraph"  >
+    </div>
+    <div class="form-group">
+        <label >家庭住址</label>
+        <input type="password" class="form-control" ng-model="user.homeAddress"  >
+    </div>
+        <button ng-click="addUser(user)" class="btn btn-default">Submit</button>
+        <a href="#/searchUser" class="btn btn-info ">Back</a>
+    </div>
+</form>
+    <!--<div class="form-group">-->
+        <!--<label  >办公地址</label>-->
+        <!--<input type="text" class="form-control" ng-model="user.officeAddress">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label >其他地址</label>-->
+        <!--<input type="text" class="form-control"  ng-model="user.otherAddress" >-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label  >办公电话</label>-->
+        <!--<input type="text" class="form-control" ng-model="user.officeTelephone" >-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label >其他联系电话</label>-->
+        <!--<input type="text" class="form-control" ng-model="user.otherTelephone" >-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label >开启号码隐藏</label>-->
+        <!--<input type="text" class="form-control" ng-model="user.ifHideNum" >-->
+    <!--</div>-->
+

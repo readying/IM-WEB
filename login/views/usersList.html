@@ -1,0 +1,49 @@
+<div class="col-sm-12" align="center">
+
+
+    <h1 align="center"> 所有用户列表 </h1><br><br>
+
+    <table class="table table-responsive table-hover table-striped">
+        <thead>
+        <tr class="text-danger">
+            <th>姓名</th>
+            <th>电话</th>
+            <th>邮箱</th>
+            <th>性别</th>
+            <th>居住地</th>
+            <th>生日</th>
+            <th>昵称</th>
+            <th>警员编号</th>
+            <th>微信号</th>
+            <th>是否使用</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="text-info" ng-repeat="item in haha">
+            <td>{{item.realName}}</td>
+            <td>{{item.phone}}</td>
+            <td>{{item.mail}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.nativePlace}}</td>
+            <td>{{item.birthDate}}</td>
+            <td>{{item.nickName}}</td>
+            <td>{{item.policeNum}}</td>
+            <td>{{item.weChat}}</td>
+            <td>{{item.ifUse}}</td>
+            <td class="text-center">
+                <button class="btn btn-sm btn-danger " ng-click="deleteUser(item)">
+                    <span style="text-shadow:black 5px 3px 3px;">删除</span>
+                </button>
+                <a href="#/addUser" class="btn btn-sm btn-info">
+
+                    <span style="text-shadow:black 5px 3px 3px;">添加</span>
+                </a>
+                <a href="#/updateUser" class="btn btn-sm btn-warning" ng-click="updateUser(item)">
+                    <span style="text-shadow:black 5px 3px 3px;">修改</span>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

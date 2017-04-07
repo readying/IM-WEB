@@ -1,0 +1,118 @@
+<style>
+    .ng-invalid {
+        background-color: lightpink;
+    }
+
+    .ng-valid {
+        background-color: lightseagreen
+    }
+
+    span.error {
+        color: red;
+        font-weight: bold
+    }
+</style>
+
+
+<h1 class="text-center ">
+    <small>欢迎注册</small>
+</h1>
+<!--<form j-->
+<!--姓名:<input type="text" name="realName"/>-->
+<!--性别:<input type="text" name="gender"/>-->
+<!--<input type="submit" class="btn btn-primary" value="submit"/>-->
+<!--<a href="#/searchUser" class="btn  btn-primary" >返回</a>-->
+<!--</form>-->
+
+<form name="addingUserForm" novalidate>
+    <div class="well">
+        <div class="input-group ">
+            <span class="input-group-addon"> 姓名 </span>
+            <input type="text" class="form-control" ng-model="user.realName" name="realName" required>
+            <span class="error" ng-show="addingUserForm.realName.$error.required">
+                please enter a name
+            </span>
+        </div>
+
+        <br>
+        <span class="label-info"> 性别 </span>
+        <div class="radio">
+
+            <label>
+                <input type="radio" ng-model="user.gender" value="man">Man
+                <input type="radio" ng-model="user.gender" value="woman">woman
+            </label>
+        </div>
+        <!--<div class="input-group ">-->
+        <!--<span class="input-group-addon"> 性别 </span>-->
+        <!--<input type="checkbox" class="form-control" ng-model="user.gender">-->
+        <!--</div>-->
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"> 电话</span>
+            <input type="text" class="form-control" ng-model="user.phone" name="phone" required/>
+            <span class="error" ng-show="addingUserForm.phone.$error.required">电话</span>
+        </div>
+
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"> 邮箱</span>
+            <input type="email" class="form-control" ng-model="user.mail" name="mail" required>
+            <span class="error ng-invalid ng-dirty" ng-show="addingUserForm.mail.$error.required">非法邮箱</span>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"> 部门</span>
+            <input type="text" class="form-control" ng-model="user.org">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"> 职称</span>
+            <input type="text" class="form-control" ng-model="user.station">
+        </div>
+
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"> 民族</span>
+            <input type="text" class="form-control" ng-model="user.nation">
+        </div>
+
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"> 籍贯</span>
+            <input type="text" class="form-control" ng-model="user.nativePlace">
+        </div>
+
+        <br>
+        <button ng-click="addUser(user)" class="btn btn-default">Submit</button>
+        <a href="#/searchUser" class="btn btn-info ">Back</a>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

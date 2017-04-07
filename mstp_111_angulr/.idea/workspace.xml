@@ -4,10 +4,8 @@
 <<<<<<< HEAD
     <list default="true" id="76965490-324e-4feb-ae2f-4c46792eeba9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-=======
     <list default="true" id="76965490-324e-4feb-ae2f-4c46792eeba9" name="Default" comment="修改资源的新增功能">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../command/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../command/.idea/workspace.xml" />
->>>>>>> d7c7b66bb566a05da708c44997502b4081a2a55f
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,10 +39,8 @@
 <<<<<<< HEAD
             <state relative-caret-position="350">
               <caret line="20" column="96" lean-forward="false" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
-=======
             <state relative-caret-position="207">
               <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
->>>>>>> d7c7b66bb566a05da708c44997502b4081a2a55f
               <folding />
             </state>
           </provider>
@@ -55,9 +51,7 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
             <state relative-caret-position="1000">
-=======
             <state relative-caret-position="920">
->>>>>>> d7c7b66bb566a05da708c44997502b4081a2a55f
               <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
               <folding />
             </state>
@@ -70,10 +64,8 @@
 <<<<<<< HEAD
             <state relative-caret-position="425">
               <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-=======
             <state relative-caret-position="1863">
               <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
->>>>>>> d7c7b66bb566a05da708c44997502b4081a2a55f
               <folding />
             </state>
           </provider>
@@ -85,10 +77,8 @@
 <<<<<<< HEAD
             <state relative-caret-position="750">
               <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-=======
             <state relative-caret-position="690">
               <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
->>>>>>> d7c7b66bb566a05da708c44997502b4081a2a55f
               <folding />
             </state>
           </provider>
@@ -99,9 +89,7 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
             <state relative-caret-position="2125">
-=======
             <state relative-caret-position="1955">
->>>>>>> d7c7b66bb566a05da708c44997502b4081a2a55f
               <caret line="85" column="18" lean-forward="false" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
               <folding />
             </state>

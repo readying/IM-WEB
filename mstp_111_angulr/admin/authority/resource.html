@@ -10,12 +10,15 @@
                 <th>资源名称</th>
                 <th>资源简介</th>
                 <th>资源路径</th>
-                <th>资源级别</th>
+                <th>级别</th>
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="item in resources">
-                <td>{{item.resourceName}}</td>
+            <tr ng-repeat="item in allResources">
+                <td><input type="checkbox" value="{{item.resourceName}}"
+                           ng-checked=" selectedIds.indexOf(item.id) > -1"
+                           ng-click=" toggleSelection(item.id)"
+                > {{item.resourceName}}</td>
                 <td>{{item.description}}</td>
                 <td>{{item.url}}</td>
                 <td>{{item.level}}</td>

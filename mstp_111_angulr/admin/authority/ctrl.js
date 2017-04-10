@@ -11,8 +11,7 @@ app.controller('AuthorityListController', function ($rootScope, $scope, $modal, 
         type: 'get',
         url: $scope.app.host + "/authority/authorities",
         success: function (data) {
-            var obj = JSON.parse(data);
-            $scope.users = obj;
+            $scope.users = JSON.parse(data);
             $scope.haha = $scope.users.data;
             $scope.$apply();
         }
@@ -134,38 +133,65 @@ app.controller('AuthorityResourceController', ['$scope', '$modalInstance', funct
 
                 $scope.allIdName[key] = value.id;
             });
-
-            //    $scope.allIdName = testData;
-
-            var t = $scope.allIdName.indexOf("1");
-
-
         }
     });
+   // $http.get(data.app.host + "/resource/resources")
+   //     .success(function (data) {
+   //         var obj = JSON.parse(data);
+   //         $scope.allResources = obj.data;
+   //
+   //         angular.forEach($scope.allResources, function (value, key) {
+   //             $scope.allIdName[key] = value.id;
+   //         });
+   //     });
+
+
+
+
+
 
     //点击 checkbox触发的函数
 
     $scope.toggleSelection = function (id) {
 
-        var idx = $scope.selectedIds.indexOf(id);
+        let idx = $scope.selectedIds.indexOf(id);
+
+
+        // 给权限增加/删除资源的时候，同时需要权限和资源的ID号，第一个id代表权限id, resourcesIds代表资源id
+        let dataPost = {"id":$scope.data.authorityId, "resourceIds":id };
 
         // is currently selected
         if (idx > -1) {
             // 将这个给删除
+            $.ajax({
+                type:'post',
+                url: data.app.host + "/resourceAuthority/"+ $scope.data.authorityId + "/delete",
+                data:dataPost,
+                success:function (data) {
+                    let obj = JSON.parse(data);
+                    if("0000" == obj.code){
+                        alert("删除成功！");
+                    }
+                }
+
+            })
+
         } else {
             // 将这个资源新增进去
             $.ajax({
                 type: 'post',
                 url: data.app.host + "/resourceAuthority/add",
-                data: id,
+                data: dataPost,
                 success: function (data) {
-                    var obj = JSON.parse(data);
-
-                   alert(data.code);
+                    let obj = JSON.parse(data);
+                    if("0000" == obj.code){
+                        alert("增加成功！");
+                    }
                 }
             });
+
         }
-    }
+    };
 
 
     $scope.ok = function () {

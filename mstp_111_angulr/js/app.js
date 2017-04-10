@@ -7,6 +7,7 @@ angular.module('app', [
     'ngResource',
     'ngSanitize',
     'ngTouch',
+    'ngRoute',
     'ngStorage',
     'ui.router',
     'ui.bootstrap',
@@ -16,4 +17,4 @@ angular.module('app', [
     'oc.lazyLoad',
     'pascalprecht.translate',
     'ncy-angular-breadcrumb'
-    ])
+]);

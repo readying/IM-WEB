@@ -1,6 +1,6 @@
 'use strict';
 
-app
+angular.module('app')
     .run(
         function ($rootScope,   $state,   $stateParams,$localStorage,$http) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + $localStorage.auth;

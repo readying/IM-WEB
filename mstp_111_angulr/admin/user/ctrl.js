@@ -13,14 +13,22 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http) {
         }
     });
 
+    // $http.get($scope.app.host + "/userinfo/userinfos",{
+    //      withCredentials:true
+    // }).success(function (data) {
+    //     $scope.users = JSON.parse(data);
+    //     $scope.haha = $scope.users.data;
+    //     $scope.$apply();
+    // });
+
     $scope.delete = function (id) {
         //弹出删除确认
-        var modalInstance = $modal.open({
-            templateUrl: 'admin/confirm.html',
-            controller: 'ConfirmController',
+        var modalinstance = $modal.open({
+            templateurl: 'admin/confirm.html',
+            controller: 'confirmcontroller',
             size: 'sm',
         });
-        modalInstance.result.then(function () {
+        modalinstance.result.then(function () {
             $.ajax({
                 type: 'get',
                 url: $scope.app.host + "/userinfo/" + id.id + "/delete",
@@ -33,8 +41,8 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http) {
     };
 
     $scope.account = function (id) {
-        var _scope = $rootScope.$new();
-        _scope.data = {
+        var scope = $rootScope.$new();
+        scope.data = {
             userid: id.id,
             app: $scope.app
         }
@@ -42,7 +50,7 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http) {
         var modalInstance = $modal.open({
             templateUrl: 'admin/user/account.html',
             controller: 'AccountController',
-            scope: _scope
+            scope: scope
         });
         modalInstance.result.then(function () {
         });
@@ -64,7 +72,6 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
 
     console.log(data.userid);
 
-
     //多选框所有角色信息
     $.ajax({
         type: 'get',
@@ -73,7 +80,6 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
             $scope.roles = JSON.parse(data);
             $scope.roleList = $scope.roles.data;
             $scope.$apply();
-
         }
     });
 
@@ -82,20 +88,20 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
         type: 'get',
         url: data.app.host + "/userinfo/" + data.userid + "/accounts",
         success: function (data) {
-            $scope.list = JSON.parse(data);
+            $scope.accountlist = JSON.parse(data);
+            $scope.list = $scope.accountlist.data;
             $scope.$apply();
         }
     });
 
-
     $scope.add = function () {
         var obj = {userName: '', userinfoAccountRoleList: {}};
         $scope.list.push(obj);
-    }
+    };
 
     $scope.del = function (idx) {
         $scope.list.splice(idx, 1);
-    }
+    };
 
     $scope.ok = function () {
         alert($scope.list);
@@ -114,7 +120,8 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
             type: 'get',
             url: $scope.app.host + "/userinfo/" + $stateParams.id,
             success: function (data) {
-                $scope.userInfo = JSON.parse(data);
+                let obj = JSON.parse(data);
+                $scope.userInfo = obj.data;
                 $scope.$apply();
             }
         })
@@ -135,7 +142,6 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
                 }
             })
         }
-
         else {
             $.ajax({
                 type: 'post',
@@ -148,8 +154,6 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
 
         }
     };
-
-
 });
 
 

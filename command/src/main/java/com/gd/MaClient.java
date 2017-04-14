@@ -29,6 +29,7 @@ public class MaClient {
         String password = "111111";
         byte[] token = (username + ":" + password).getBytes("utf-8");
         String authorization = "Basic " + new String(Base64.getEncoder().encode(token), "utf-8");
+        //此时的 authorization 为：Basic TGlvbl9hY2NvdW50OjExMTExMQ==
         URL url = new URL("http://localhost:9090/v1.0/ma/userinfo/userinfos");
         //URL url = new URL("http://www.baidu.com");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();

@@ -49,6 +49,12 @@ public class UserInfoServiceImpl implements IUserInfoService {
     }
 
     @Override
+    public void batchDeleteObject(List<String> listIds) {
+        String currTime = TimeUtils.getCurrentTime();
+        userInfoDao.batchDeleteObject(listIds,currTime);
+    }
+
+    @Override
     public UserInfo queryForObjectById(String id) {
         return userInfoDao.queryForObjectById(id);
     }

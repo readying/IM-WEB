@@ -74,6 +74,16 @@ public interface IUserInfoDao {
     //删除实体
     @Update("Update sys_userinfo set ifuse='N',updateTime=#{updateTime} where id = #{id}")
     void deleteForObject(BaseModel baseModel);
+    //批量删除实体
+    @Update({
+            "<script>",
+            "Update sys_userinfo set ifuse='N',updateTime=#{updateTime} where id IN " +
+                    "<foreach collection='idList' open='(' close=')' item='id' separator=','>" +
+                    "#{id}" +
+                    "</foreach>",
+            "</script>"
+    })
+    void batchDeleteObject(@Param("idList") List<String> idList,@Param("updateTime") String updateTime);
     //查询最大排序编号,先将查询的字符串orderNum转换成int找最大值，再将字符串转换成int
     @Select("select CONCAT(MAX(cast(ordernum as UNSIGNED INTEGER))+1,'') from sys_userinfo")
     String queryMaxOrderNum();

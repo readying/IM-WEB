@@ -44,6 +44,8 @@ public interface IDepartmentService {
     List<UserInfo> queryDepartmentUserChildrenTree(String id);
     //为部门添加成员
     void addUserForDepartment(String id,List<String> userIds);
+    //移除部门成员
+    void deleteUserForDepartment(String id,String userId);
     //为部门分配上级部门
     void addSuperiorDepartment(String id,String parentId);
     //为部门分配下级部门

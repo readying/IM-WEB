@@ -90,6 +90,11 @@ public class DepartmentServiceImpl implements IDepartmentService {
     }
 
     @Override
+    public void deleteUserForDepartment(String id, String userId) {
+        this.departmentDao.deleteUserForDepartment(id,userId);
+    }
+
+    @Override
     public void addSuperiorDepartment(String id, String parentId) {
         this.departmentDao.addSuperiorDepartment(id,parentId);
     }

@@ -5,10 +5,7 @@ import com.gd.domain.department.Department;
 import com.gd.domain.userinfo.UserInfo;
 import com.gd.entity.DepartmentCountNum;
 import com.gd.entity.DepartmentTree;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -85,11 +82,18 @@ delimiter ;
             "insert into sys_user_department (id,userId,departmentId)",
             "values ",
             "<foreach  collection='userIds' item='userId' separator=','>",
-            "( uuid(),#{id},#{userId,jdbcType=VARCHAR})",
+            "( uuid(),#{userId,jdbcType=VARCHAR},#{id})",
             "</foreach>",
             "</script>"
     })
     void addUserForDepartment(@Param("id") String id, @Param("userIds") List<String> userIds);
+    //删除部门下成员
+    @Delete({
+            "<script>",
+            "delete from sys_user_department where departmentId = #{id} and userId = #{userId}",
+            "</script>"
+    })
+    void deleteUserForDepartment(@Param("id") String id, @Param("userId") String userId);
     //为部门分配上级部门
     @Insert({
             "<script>" ,

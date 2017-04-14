@@ -21,9 +21,24 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.access.ExceptionTranslationFilter;
 import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 
 /**
@@ -67,7 +82,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         //auth.userDetailsService(securityUserService);
-
         auth.authenticationProvider(authenticationProvider());
     }
 
@@ -78,8 +92,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     注入的authentcationManagerBean：在后面定义，是重写的方法
      */
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("*").permitAll();
-       /* //这里的定义为任何请求都要拦截，经过自定义的ObjectPostProcessor
+        //下面是允许所有用户可以访问任何请求
+        //http.authorizeRequests().antMatchers("*").permitAll();
+        //token一：禁用session
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        //token二：替换ExceptionTranslationFilter
+        http.addFilterAfter(getMyExceptionTranslationFilter(),ExceptionTranslationFilter.class);
+        //这里的定义为任何请求都要拦截，经过自定义的ObjectPostProcessor
         http.authorizeRequests().anyRequest().authenticated().withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
             public <O extends FilterSecurityInterceptor> O postProcess(O fsi) {
                 fsi.setSecurityMetadataSource(mySecurityMetadataSource);
@@ -89,9 +108,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             }
         });
         //然后定义匿名不允许，Basic提交需要验证，使用的注入为security文件夹下的CustomBasicAuthenticationEntryPoint文件
-        http.anonymous().disable();
+        //下面这一行本来存在，但是在表单登录token验证中，存在下面这一行会失效
+        //http.anonymous().disable();
+        http.formLogin().successHandler(successHandler()).failureHandler(failureHandler()).and().logout().logoutSuccessHandler(logoutSuccessHandler());
         http.authorizeRequests().anyRequest().authenticated().expressionHandler(webSecurityExpressionHandler()).and().httpBasic().realmName(REALM).authenticationEntryPoint(getBasicAuthentryPoint());
-       */http.csrf().disable();
+        http.csrf().disable();
         //http.regexMatcher("/pc").formLogin().loginPage("/login.html");
     }
 
@@ -154,11 +175,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Bean(name = "authenticationProvider")
     public DaoAuthenticationProvider authenticationProvider() {
+        //一：下面使用security自带的密码验证
+       /*
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setPasswordEncoder(passwordEncoder());
         authenticationProvider.setUserDetailsService(securityUserService);
         authenticationProvider.setSaltSource(saltSource());
         return authenticationProvider;
+        */
+       //token三：使用自定义的密码验证，从而实现token验证无session
+        MyAuthenticationProvider daoAuthenticationProvider = new MyAuthenticationProvider();
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
+        daoAuthenticationProvider.setUserDetailsService(securityUserService);
+        daoAuthenticationProvider.setSaltSource(saltSource());
+        return daoAuthenticationProvider;
     }
 
     //用户登录的密码加密方式
@@ -166,6 +196,44 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public Md5PasswordEncoder passwordEncoder() {
         return new Md5PasswordEncoder();
     }
+    //自定义的extends ExceptionTranslationFilter的Filter，捕获用户未登录异常
+    @Bean
+    public ExceptionTranslationFilter getMyExceptionTranslationFilter(){
+        MyExceptionTranslationFilter myExceptionTranslationFilter = new MyExceptionTranslationFilter(new MyAuthenticationEntryPoint("/login"));
+        return myExceptionTranslationFilter;
+    }
+    //token四：返回登录成功的handler
+    private AuthenticationSuccessHandler successHandler(){
+        return new SimpleUrlAuthenticationSuccessHandler() {
+            public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+                    throws IOException, ServletException {
+                HttpSession session = request.getSession();
+                Object isJustLogin = session.getAttribute("isJustLogin");
+                //判断用户是否刚刚登录，如果是，则response返回token
+                if(isJustLogin != null){
+                    if(isJustLogin.toString().equals("true")){
+                        if(session.getAttribute("token") != null){
+                            response.getWriter().write(session.getAttribute("token").toString());
+                        }
+                        session.setAttribute("isJustLogin","false");
+                    }
 
-
+                }
+                response.setStatus(200,"Login success");
+            }
+        };
+    }
+    //token五：返回登录失败的handler
+    private AuthenticationFailureHandler failureHandler() {
+        return new SimpleUrlAuthenticationFailureHandler() {
+            public void onAuthenticationFailure(HttpServletRequest request,HttpServletResponse response, AuthenticationException exception)
+                    throws IOException, ServletException {
+                response.sendError(401,"Login failed");
+            }
+        };
+    }
+    //返回注销成功的handler
+    private SimpleUrlLogoutSuccessHandler logoutSuccessHandler(){
+        return new MyLogoutSuccessHandler();
+    }
 }

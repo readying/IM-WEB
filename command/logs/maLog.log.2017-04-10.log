@@ -1,0 +1,801 @@
+2017-04-10 15:57:07.303 [main] INFO  com.gd.MaApplication - Starting MaApplication on YH-20160825WIPY with PID 6440 (E:\ideaProject\command\target\classes started by Administrator in E:\ideaProject\command)
+2017-04-10 15:57:07.306 [main] INFO  com.gd.MaApplication - No active profile set, falling back to default profiles: default
+2017-04-10 15:57:07.595 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-04-10 15:57:07.911 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c284af: startup date [Mon Apr 10 15:57:07 CST 2017]; root of context hierarchy
+2017-04-10 15:57:10.532 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd012a56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-10 15:57:10.792 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$26136074] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-10 15:57:11.485 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @7543ms
+2017-04-10 15:57:11.739 [main] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainerFactory - Server initialized with port: 9090
+2017-04-10 15:57:11.741 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.3.14.v20161028
+2017-04-10 15:57:11.895 [main] INFO  application - Initializing Spring embedded WebApplicationContext
+2017-04-10 15:57:11.896 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3985 ms
+2017-04-10 15:57:12.248 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-04-10 15:57:12.248 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-04-10 15:57:12.249 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-04-10 15:57:12.249 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-04-10 15:57:12.250 [main] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-04-10 15:57:12.250 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-04-10 15:57:12.656 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@6c951ada{/v1.0/ma,file:///C:/Users/Administrator/AppData/Local/Temp/jetty-docbase.7919799262189437839.9090/,AVAILABLE}
+2017-04-10 15:57:12.656 [main] INFO  org.eclipse.jetty.server.Server - Started @8715ms
+2017-04-10 15:57:12.705 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2017-04-10 15:57:42.545 [main] INFO  com.gd.MaApplication - Starting MaApplication on YH-20160825WIPY with PID 3740 (E:\ideaProject\command\target\classes started by Administrator in E:\ideaProject\command)
+2017-04-10 15:57:42.548 [main] INFO  com.gd.MaApplication - No active profile set, falling back to default profiles: default
+2017-04-10 15:57:42.862 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-04-10 15:57:42.911 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c284af: startup date [Mon Apr 10 15:57:42 CST 2017]; root of context hierarchy
+2017-04-10 15:57:44.394 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$49639d0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-10 15:57:44.605 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$9275d32d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-10 15:57:45.192 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @3879ms
+2017-04-10 15:57:45.392 [main] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainerFactory - Server initialized with port: 9090
+2017-04-10 15:57:45.393 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.3.14.v20161028
+2017-04-10 15:57:45.481 [main] INFO  application - Initializing Spring embedded WebApplicationContext
+2017-04-10 15:57:45.481 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2570 ms
+2017-04-10 15:57:45.850 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-04-10 15:57:45.851 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-04-10 15:57:45.851 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-04-10 15:57:45.851 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-04-10 15:57:45.852 [main] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-04-10 15:57:45.853 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-04-10 15:57:46.051 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@11f23038{/v1.0/ma,file:///C:/Users/Administrator/AppData/Local/Temp/jetty-docbase.8045746368159155851.9090/,AVAILABLE}
+2017-04-10 15:57:46.051 [main] INFO  org.eclipse.jetty.server.Server - Started @4739ms
+2017-04-10 15:57:46.097 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+2017-04-10 15:57:49.538 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/hello/hello]}" onto public java.lang.String com.gd.api.HelloController.hello()
+2017-04-10 15:57:49.541 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/add],methods=[POST]}" onto public java.lang.String com.gd.controller.account.AccountController.add(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.account.Account)
+2017-04-10 15:57:49.541 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/{id}/update],methods=[POST]}" onto public java.lang.String com.gd.controller.account.AccountController.update(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.account.Account)
+2017-04-10 15:57:49.541 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.account.AccountController.delete(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.541 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/all],methods=[GET]}" onto public java.lang.String com.gd.controller.account.AccountController.getAllAccounts(java.security.Principal,javax.servlet.http.HttpServletRequest)
+2017-04-10 15:57:49.542 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/accounts],methods=[GET]}" onto public java.lang.String com.gd.controller.account.AccountController.accounts(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:49.542 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.account.AccountController.show(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.542 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/account/{id}/resetPassword],methods=[POST]}" onto public java.lang.String com.gd.controller.account.AccountController.resetPassword(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.543 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/accountRole/add],methods=[POST]}" onto public java.lang.String com.gd.controller.account_role.AccountRoleController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.543 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/accountRole/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.account_role.AccountRoleController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.543 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/accountRole/{id}/delete],methods=[POST]}" onto public java.lang.String com.gd.controller.account_role.AccountRoleController.removeUserAccount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.544 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/accountUser/add],methods=[POST]}" onto public java.lang.String com.gd.controller.account_user.AccountUserController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.544 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/accountUser/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.account_user.AccountUserController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.545 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/accountUser/{id}/delete],methods=[DELETE]}" onto public java.lang.String com.gd.controller.account_user.AccountUserController.removeUserAccount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.548 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/authority/add],methods=[POST]}" onto public java.lang.String com.gd.controller.authority.AuthorityController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.authority.Authority)
+2017-04-10 15:57:49.549 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/authority/{id}/update],methods=[POST]}" onto public java.lang.String com.gd.controller.authority.AuthorityController.update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.authority.Authority)
+2017-04-10 15:57:49.549 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/authority/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.authority.AuthorityController.delete(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.549 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/authority/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.authority.AuthorityController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.549 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/authority/authorities],methods=[GET]}" onto public java.lang.String com.gd.controller.authority.AuthorityController.userinfos(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:49.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/add],methods=[POST]}" onto public java.lang.String com.gd.controller.department.DepartmentController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.department.Department)
+2017-04-10 15:57:49.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/update],methods=[POST]}" onto public java.lang.String com.gd.controller.department.DepartmentController.update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.department.Department)
+2017-04-10 15:57:49.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.department.DepartmentController.delete(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.department.DepartmentController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.552 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/departments],methods=[GET]}" onto public java.lang.String com.gd.controller.department.DepartmentController.resources(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:49.553 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/tree],methods=[GET]}" onto public java.lang.String com.gd.controller.department.DepartmentController.queryDepartmentTree(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.553 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/childrenTree],methods=[GET]}" onto public java.lang.String com.gd.controller.department.DepartmentController.queryDepartmentChildrenTree(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.553 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/addUser],methods=[POST]}" onto public java.lang.String com.gd.controller.department.DepartmentController.addUserForDepartment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.553 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/deleteUser],methods=[POST]}" onto public java.lang.String com.gd.controller.department.DepartmentController.deleteUserForDepartment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.553 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/addSuperiorDepartment],methods=[GET]}" onto public java.lang.String com.gd.controller.department.DepartmentController.addSuperiorDepartment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.553 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/department/{id}/addChidrenDepartment],methods=[POST]}" onto public java.lang.String com.gd.controller.department.DepartmentController.addChidrenDepartment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.554 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/proxy]}" onto public java.lang.String com.gd.controller.hello.Hello.proxy(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2017-04-10 15:57:49.554 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/test/hello]}" onto public java.lang.String com.gd.controller.hello.Hello.hello(javax.servlet.http.HttpServletRequest)
+2017-04-10 15:57:49.555 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index/login]}" onto public java.lang.String com.gd.controller.IndexController.index()
+2017-04-10 15:57:49.556 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resource/add],methods=[POST]}" onto public java.lang.String com.gd.controller.resource.ResourceController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.resource.Resource)
+2017-04-10 15:57:49.556 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resource/{id}/update],methods=[POST]}" onto public java.lang.String com.gd.controller.resource.ResourceController.update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.resource.Resource)
+2017-04-10 15:57:49.556 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resource/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.resource.ResourceController.delete(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.556 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resource/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.resource.ResourceController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.557 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resource/resources],methods=[GET]}" onto public java.lang.String com.gd.controller.resource.ResourceController.resources(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:49.557 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resourceAuthority/add],methods=[POST]}" onto public java.lang.String com.gd.controller.resource_authority.ResourceAuthorityController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.558 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resourceAuthority/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.resource_authority.ResourceAuthorityController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.558 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/resourceAuthority/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.resource_authority.ResourceAuthorityController.removeUserAccount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.559 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role/add],methods=[POST]}" onto public java.lang.String com.gd.controller.role.RoleController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.role.Role)
+2017-04-10 15:57:49.559 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role/{id}/update],methods=[POST]}" onto public java.lang.String com.gd.controller.role.RoleController.update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.role.Role)
+2017-04-10 15:57:49.559 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.role.RoleController.delete(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.559 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.role.RoleController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.560 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/role/roles],methods=[GET]}" onto public java.lang.String com.gd.controller.role.RoleController.resources(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:49.560 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/roleAuthority/add],methods=[POST]}" onto public java.lang.String com.gd.controller.role_authority.RoleAuthorityController.add(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.561 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/roleAuthority/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.role_authority.RoleAuthorityController.show(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.561 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/roleAuthority/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.role_authority.RoleAuthorityController.removeUserAccount(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.563 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/add],methods=[POST]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.add(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.userinfo.UserInfo)
+2017-04-10 15:57:49.563 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}/update],methods=[POST]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.update(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,com.gd.domain.userinfo.UserInfo)
+2017-04-10 15:57:49.563 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.delete(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.563 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.show(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.563 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/userinfos],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.userinfos(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:49.564 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/batch/delete],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.batchDelete(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.564 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}/accounts],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.showAccountsById(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.564 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}/friend],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.findUserFriend(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.564 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}/exitDepartment],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.exitDepartment(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2017-04-10 15:57:49.564 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/userinfo/{id}/rootDepartment],methods=[GET]}" onto public java.lang.String com.gd.controller.userinfo.UserInfoController.queryRootDepartmentForUser(java.security.Principal,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)
+2017-04-10 15:57:49.565 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2017-04-10 15:57:49.567 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-04-10 15:57:49.567 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-04-10 15:57:49.568 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-04-10 15:57:49.570 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-04-10 15:57:49.571 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-10 15:57:50.198 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+2017-04-10 15:57:50.198 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger/**'], []
+2017-04-10 15:57:50.198 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/v2/api-docs'], []
+2017-04-10 15:57:50.199 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+2017-04-10 15:57:50.199 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+2017-04-10 15:57:50.199 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/images/**'], []
+2017-04-10 15:57:50.199 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/configuration/**'], []
+2017-04-10 15:57:50.308 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c04ec8, org.springframework.security.web.context.SecurityContextPersistenceFilter@f1e1d66, org.springframework.security.web.header.HeaderWriterFilter@598f1faf, org.springframework.security.web.authentication.logout.LogoutFilter@572db5ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47f416d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d686622, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e5f05f8, org.springframework.security.web.session.SessionManagementFilter@5d2bc446, org.springframework.security.web.access.ExceptionTranslationFilter@42257df7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b1895e]
+2017-04-10 15:57:50.649 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c284af: startup date [Mon Apr 10 15:57:42 CST 2017]; root of context hierarchy
+2017-04-10 15:57:50.819 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 15:57:50.819 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 15:57:50.886 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-10 15:57:52.029 [main] INFO  o.s.w.servlet.view.freemarker.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2017-04-10 15:57:52.809 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-04-10 15:57:52.810 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2017-04-10 15:57:52.816 [main] INFO  o.s.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2017-04-10 15:57:52.827 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2017-04-10 15:57:52.848 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found {0} custom documentation plugin(s)
+2017-04-10 15:57:52.855 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2017-04-10 15:57:52.860 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method accounts was account-controller
+2017-04-10 15:57:52.861 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: accounts belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.862 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-controller
+2017-04-10 15:57:52.863 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.863 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method getAllAccounts was account-controller
+2017-04-10 15:57:52.863 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: getAllAccounts belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.863 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was account-controller
+2017-04-10 15:57:52.863 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: delete belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.864 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resetPassword was account-controller
+2017-04-10 15:57:52.864 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: resetPassword belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.864 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was account-controller
+2017-04-10 15:57:52.864 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: update belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.865 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-controller
+2017-04-10 15:57:52.865 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='account-controller', position=0, controller=com.gd.controller.account.AccountController}]] 
+2017-04-10 15:57:52.865 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-role-controller
+2017-04-10 15:57:52.865 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='account-role-controller', position=0, controller=com.gd.controller.account_role.AccountRoleController}]] 
+2017-04-10 15:57:52.865 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was account-role-controller
+2017-04-10 15:57:52.865 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: removeUserAccount belongs to groups: [[ResourceGroup{groupName='account-role-controller', position=0, controller=com.gd.controller.account_role.AccountRoleController}]] 
+2017-04-10 15:57:52.866 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-role-controller
+2017-04-10 15:57:52.866 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='account-role-controller', position=0, controller=com.gd.controller.account_role.AccountRoleController}]] 
+2017-04-10 15:57:52.866 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-user-controller
+2017-04-10 15:57:52.866 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='account-user-controller', position=0, controller=com.gd.controller.account_user.AccountUserController}]] 
+2017-04-10 15:57:52.866 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was account-user-controller
+2017-04-10 15:57:52.866 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: removeUserAccount belongs to groups: [[ResourceGroup{groupName='account-user-controller', position=0, controller=com.gd.controller.account_user.AccountUserController}]] 
+2017-04-10 15:57:52.867 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-user-controller
+2017-04-10 15:57:52.867 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='account-user-controller', position=0, controller=com.gd.controller.account_user.AccountUserController}]] 
+2017-04-10 15:57:52.867 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was authority-controller
+2017-04-10 15:57:52.867 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='authority-controller', position=0, controller=com.gd.controller.authority.AuthorityController}]] 
+2017-04-10 15:57:52.868 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method userinfos was authority-controller
+2017-04-10 15:57:52.868 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: userinfos belongs to groups: [[ResourceGroup{groupName='authority-controller', position=0, controller=com.gd.controller.authority.AuthorityController}]] 
+2017-04-10 15:57:52.868 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was authority-controller
+2017-04-10 15:57:52.868 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: delete belongs to groups: [[ResourceGroup{groupName='authority-controller', position=0, controller=com.gd.controller.authority.AuthorityController}]] 
+2017-04-10 15:57:52.868 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was authority-controller
+2017-04-10 15:57:52.868 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: update belongs to groups: [[ResourceGroup{groupName='authority-controller', position=0, controller=com.gd.controller.authority.AuthorityController}]] 
+2017-04-10 15:57:52.869 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was authority-controller
+2017-04-10 15:57:52.869 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='authority-controller', position=0, controller=com.gd.controller.authority.AuthorityController}]] 
+2017-04-10 15:57:52.869 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was department-controller
+2017-04-10 15:57:52.869 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.869 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was department-controller
+2017-04-10 15:57:52.869 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: resources belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.870 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addChidrenDepartment was department-controller
+2017-04-10 15:57:52.870 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: addChidrenDepartment belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.870 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addSuperiorDepartment was department-controller
+2017-04-10 15:57:52.870 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: addSuperiorDepartment belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.870 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addUserForDepartment was department-controller
+2017-04-10 15:57:52.871 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: addUserForDepartment belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.871 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryDepartmentChildrenTree was department-controller
+2017-04-10 15:57:52.871 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: queryDepartmentChildrenTree belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.871 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteUserForDepartment was department-controller
+2017-04-10 15:57:52.871 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: deleteUserForDepartment belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.872 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was department-controller
+2017-04-10 15:57:52.872 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: delete belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.872 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryDepartmentTree was department-controller
+2017-04-10 15:57:52.872 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: queryDepartmentTree belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.873 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was department-controller
+2017-04-10 15:57:52.873 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: update belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.873 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was department-controller
+2017-04-10 15:57:52.873 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='department-controller', position=0, controller=com.gd.controller.department.DepartmentController}]] 
+2017-04-10 15:57:52.874 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:52.874 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: index belongs to groups: [[ResourceGroup{groupName='index-controller', position=0, controller=com.gd.controller.IndexController}]] 
+2017-04-10 15:57:52.874 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was resource-controller
+2017-04-10 15:57:52.874 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='resource-controller', position=0, controller=com.gd.controller.resource.ResourceController}]] 
+2017-04-10 15:57:52.874 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was resource-controller
+2017-04-10 15:57:52.874 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: resources belongs to groups: [[ResourceGroup{groupName='resource-controller', position=0, controller=com.gd.controller.resource.ResourceController}]] 
+2017-04-10 15:57:52.875 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was resource-controller
+2017-04-10 15:57:52.875 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: delete belongs to groups: [[ResourceGroup{groupName='resource-controller', position=0, controller=com.gd.controller.resource.ResourceController}]] 
+2017-04-10 15:57:52.875 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was resource-controller
+2017-04-10 15:57:52.875 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: update belongs to groups: [[ResourceGroup{groupName='resource-controller', position=0, controller=com.gd.controller.resource.ResourceController}]] 
+2017-04-10 15:57:52.876 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was resource-controller
+2017-04-10 15:57:52.876 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='resource-controller', position=0, controller=com.gd.controller.resource.ResourceController}]] 
+2017-04-10 15:57:52.876 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was resource-authority-controller
+2017-04-10 15:57:52.876 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='resource-authority-controller', position=0, controller=com.gd.controller.resource_authority.ResourceAuthorityController}]] 
+2017-04-10 15:57:52.876 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was resource-authority-controller
+2017-04-10 15:57:52.876 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: removeUserAccount belongs to groups: [[ResourceGroup{groupName='resource-authority-controller', position=0, controller=com.gd.controller.resource_authority.ResourceAuthorityController}]] 
+2017-04-10 15:57:52.877 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was resource-authority-controller
+2017-04-10 15:57:52.877 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='resource-authority-controller', position=0, controller=com.gd.controller.resource_authority.ResourceAuthorityController}]] 
+2017-04-10 15:57:52.877 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was role-controller
+2017-04-10 15:57:52.877 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.gd.controller.role.RoleController}]] 
+2017-04-10 15:57:52.877 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was role-controller
+2017-04-10 15:57:52.877 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: resources belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.gd.controller.role.RoleController}]] 
+2017-04-10 15:57:52.878 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was role-controller
+2017-04-10 15:57:52.878 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: delete belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.gd.controller.role.RoleController}]] 
+2017-04-10 15:57:52.878 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was role-controller
+2017-04-10 15:57:52.878 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: update belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.gd.controller.role.RoleController}]] 
+2017-04-10 15:57:52.878 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was role-controller
+2017-04-10 15:57:52.878 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='role-controller', position=0, controller=com.gd.controller.role.RoleController}]] 
+2017-04-10 15:57:52.879 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was role-authority-controller
+2017-04-10 15:57:52.879 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='role-authority-controller', position=0, controller=com.gd.controller.role_authority.RoleAuthorityController}]] 
+2017-04-10 15:57:52.879 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was role-authority-controller
+2017-04-10 15:57:52.879 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: removeUserAccount belongs to groups: [[ResourceGroup{groupName='role-authority-controller', position=0, controller=com.gd.controller.role_authority.RoleAuthorityController}]] 
+2017-04-10 15:57:52.880 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was role-authority-controller
+2017-04-10 15:57:52.880 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='role-authority-controller', position=0, controller=com.gd.controller.role_authority.RoleAuthorityController}]] 
+2017-04-10 15:57:52.880 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:52.880 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: hello belongs to groups: [[ResourceGroup{groupName='hello', position=0, controller=com.gd.controller.hello.Hello}]] 
+2017-04-10 15:57:52.880 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:52.880 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: proxy belongs to groups: [[ResourceGroup{groupName='hello', position=0, controller=com.gd.controller.hello.Hello}]] 
+2017-04-10 15:57:52.880 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was user-info-controller
+2017-04-10 15:57:52.880 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: add belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.881 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method batchDelete was user-info-controller
+2017-04-10 15:57:52.881 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: batchDelete belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.881 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method userinfos was user-info-controller
+2017-04-10 15:57:52.881 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: userinfos belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.881 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method showAccountsById was user-info-controller
+2017-04-10 15:57:52.881 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: showAccountsById belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.882 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was user-info-controller
+2017-04-10 15:57:52.882 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: delete belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.882 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method exitDepartment was user-info-controller
+2017-04-10 15:57:52.882 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: exitDepartment belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.882 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method findUserFriend was user-info-controller
+2017-04-10 15:57:52.882 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: findUserFriend belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.883 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryRootDepartmentForUser was user-info-controller
+2017-04-10 15:57:52.883 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: queryRootDepartmentForUser belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.883 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was user-info-controller
+2017-04-10 15:57:52.883 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: update belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.883 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was user-info-controller
+2017-04-10 15:57:52.883 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Request mapping: show belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.gd.controller.userinfo.UserInfoController}]] 
+2017-04-10 15:57:52.887 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/index-controller Description: index-controller Position: 0
+2017-04-10 15:57:52.888 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/account-user-controller Description: account-user-controller Position: 0
+2017-04-10 15:57:52.888 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/authority-controller Description: authority-controller Position: 0
+2017-04-10 15:57:52.888 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/resource-authority-controller Description: resource-authority-controller Position: 0
+2017-04-10 15:57:52.888 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/role-controller Description: role-controller Position: 0
+2017-04-10 15:57:52.888 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/user-info-controller Description: user-info-controller Position: 0
+2017-04-10 15:57:52.889 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/hello Description: hello Position: 0
+2017-04-10 15:57:52.889 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/account-role-controller Description: account-role-controller Position: 0
+2017-04-10 15:57:52.889 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/role-authority-controller Description: role-authority-controller Position: 0
+2017-04-10 15:57:52.889 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/department-controller Description: department-controller Position: 0
+2017-04-10 15:57:52.889 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/account-controller Description: account-controller Position: 0
+2017-04-10 15:57:52.890 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Created resource listing Path: /default/resource-controller Description: resource-controller Position: 0
+2017-04-10 15:57:52.910 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.910 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:52.917 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.917 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:52.924 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/accounts.com.gd.controller.account.AccountController.accounts.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.924 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/accounts.com.gd.controller.account.AccountController.accounts.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.934 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method accounts was account-controller
+2017-04-10 15:57:52.950 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method accounts was account-controller
+2017-04-10 15:57:52.959 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.959 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:52.960 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.960 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:52.960 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/add.com.gd.controller.account.AccountController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.960 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/add.com.gd.controller.account.AccountController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.977 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-controller
+2017-04-10 15:57:52.979 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-controller
+2017-04-10 15:57:52.981 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.981 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:52.981 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.981 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:52.981 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/{id}/delete.com.gd.controller.account.AccountController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.981 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/{id}/delete.com.gd.controller.account.AccountController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.984 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was account-controller
+2017-04-10 15:57:52.986 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was account-controller
+2017-04-10 15:57:52.987 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.987 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:52.987 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.987 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:52.988 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/all.com.gd.controller.account.AccountController.getAllAccounts.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.988 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/all.com.gd.controller.account.AccountController.getAllAccounts.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.989 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method getAllAccounts was account-controller
+2017-04-10 15:57:52.990 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method getAllAccounts was account-controller
+2017-04-10 15:57:52.992 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.992 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:52.992 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.992 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:52.992 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/{id}/resetPassword.com.gd.controller.account.AccountController.resetPassword.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.992 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/{id}/resetPassword.com.gd.controller.account.AccountController.resetPassword.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.996 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resetPassword was account-controller
+2017-04-10 15:57:52.997 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resetPassword was account-controller
+2017-04-10 15:57:52.998 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.998 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:52.998 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:52.998 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:52.999 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/{id}.com.gd.controller.account.AccountController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:52.999 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/{id}.com.gd.controller.account.AccountController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.002 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-controller
+2017-04-10 15:57:53.003 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-controller
+2017-04-10 15:57:53.004 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.004 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.005 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.005 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.005 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /account/{id}/update.com.gd.controller.account.AccountController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.005 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /account/{id}/update.com.gd.controller.account.AccountController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.007 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was account-controller
+2017-04-10 15:57:53.008 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was account-controller
+2017-04-10 15:57:53.013 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.013 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.013 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.013 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.014 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /accountRole/add.com.gd.controller.account_role.AccountRoleController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.014 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /accountRole/add.com.gd.controller.account_role.AccountRoleController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.015 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-role-controller
+2017-04-10 15:57:53.016 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-role-controller
+2017-04-10 15:57:53.017 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2017-04-10 15:57:53.018 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.018 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.018 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.018 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.018 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /accountRole/{id}/delete.com.gd.controller.account_role.AccountRoleController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.018 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /accountRole/{id}/delete.com.gd.controller.account_role.AccountRoleController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.020 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was account-role-controller
+2017-04-10 15:57:53.021 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was account-role-controller
+2017-04-10 15:57:53.022 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.022 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.022 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.022 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.022 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /accountRole/{id}.com.gd.controller.account_role.AccountRoleController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.022 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /accountRole/{id}.com.gd.controller.account_role.AccountRoleController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.023 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-role-controller
+2017-04-10 15:57:53.024 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-role-controller
+2017-04-10 15:57:53.024 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_1
+2017-04-10 15:57:53.026 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.026 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.026 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.026 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.026 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /accountUser/add.com.gd.controller.account_user.AccountUserController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.026 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /accountUser/add.com.gd.controller.account_user.AccountUserController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.028 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-user-controller
+2017-04-10 15:57:53.029 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was account-user-controller
+2017-04-10 15:57:53.029 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2017-04-10 15:57:53.030 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.030 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.030 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.030 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.030 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /accountUser/{id}/delete.com.gd.controller.account_user.AccountUserController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.030 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /accountUser/{id}/delete.com.gd.controller.account_user.AccountUserController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.032 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was account-user-controller
+2017-04-10 15:57:53.033 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was account-user-controller
+2017-04-10 15:57:53.033 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: removeUserAccountUsingPOST_1
+2017-04-10 15:57:53.034 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.034 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.034 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.034 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.034 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /accountUser/{id}.com.gd.controller.account_user.AccountUserController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.034 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /accountUser/{id}.com.gd.controller.account_user.AccountUserController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.035 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-user-controller
+2017-04-10 15:57:53.036 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was account-user-controller
+2017-04-10 15:57:53.037 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_2
+2017-04-10 15:57:53.038 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.038 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.038 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.038 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.038 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /authority/add.com.gd.controller.authority.AuthorityController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.039 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /authority/add.com.gd.controller.authority.AuthorityController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.041 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was authority-controller
+2017-04-10 15:57:53.041 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was authority-controller
+2017-04-10 15:57:53.042 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_3
+2017-04-10 15:57:53.042 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.043 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.043 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.043 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.043 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /authority/{id}/delete.com.gd.controller.authority.AuthorityController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.043 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /authority/{id}/delete.com.gd.controller.authority.AuthorityController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.045 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was authority-controller
+2017-04-10 15:57:53.045 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was authority-controller
+2017-04-10 15:57:53.046 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_1
+2017-04-10 15:57:53.047 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.047 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.047 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.047 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.047 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /authority/{id}.com.gd.controller.authority.AuthorityController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.047 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /authority/{id}.com.gd.controller.authority.AuthorityController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.049 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was authority-controller
+2017-04-10 15:57:53.050 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was authority-controller
+2017-04-10 15:57:53.050 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_3
+2017-04-10 15:57:53.051 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.051 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.051 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.051 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.051 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /authority/{id}/update.com.gd.controller.authority.AuthorityController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.051 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /authority/{id}/update.com.gd.controller.authority.AuthorityController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.052 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was authority-controller
+2017-04-10 15:57:53.053 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was authority-controller
+2017-04-10 15:57:53.053 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_1
+2017-04-10 15:57:53.054 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.054 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.054 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.054 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.054 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /authority/authorities.com.gd.controller.authority.AuthorityController.userinfos.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.054 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /authority/authorities.com.gd.controller.authority.AuthorityController.userinfos.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.055 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method userinfos was authority-controller
+2017-04-10 15:57:53.055 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method userinfos was authority-controller
+2017-04-10 15:57:53.058 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.058 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.059 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.059 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.059 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/add.com.gd.controller.department.DepartmentController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.059 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/add.com.gd.controller.department.DepartmentController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.061 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was department-controller
+2017-04-10 15:57:53.062 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was department-controller
+2017-04-10 15:57:53.063 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_4
+2017-04-10 15:57:53.064 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.064 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.064 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.064 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.065 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/addChidrenDepartment.com.gd.controller.department.DepartmentController.addChidrenDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.065 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/addChidrenDepartment.com.gd.controller.department.DepartmentController.addChidrenDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.067 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addChidrenDepartment was department-controller
+2017-04-10 15:57:53.068 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addChidrenDepartment was department-controller
+2017-04-10 15:57:53.070 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.070 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.070 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.070 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.070 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/addSuperiorDepartment.com.gd.controller.department.DepartmentController.addSuperiorDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.070 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/addSuperiorDepartment.com.gd.controller.department.DepartmentController.addSuperiorDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.072 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addSuperiorDepartment was department-controller
+2017-04-10 15:57:53.073 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addSuperiorDepartment was department-controller
+2017-04-10 15:57:53.075 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.075 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.075 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.075 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.075 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/addUser.com.gd.controller.department.DepartmentController.addUserForDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.075 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/addUser.com.gd.controller.department.DepartmentController.addUserForDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.078 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addUserForDepartment was department-controller
+2017-04-10 15:57:53.079 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method addUserForDepartment was department-controller
+2017-04-10 15:57:53.081 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.081 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.081 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.081 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.081 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/delete.com.gd.controller.department.DepartmentController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.081 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/delete.com.gd.controller.department.DepartmentController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.082 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was department-controller
+2017-04-10 15:57:53.083 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was department-controller
+2017-04-10 15:57:53.084 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_2
+2017-04-10 15:57:53.085 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.085 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.085 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.085 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.085 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/deleteUser.com.gd.controller.department.DepartmentController.deleteUserForDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.085 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/deleteUser.com.gd.controller.department.DepartmentController.deleteUserForDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.088 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteUserForDepartment was department-controller
+2017-04-10 15:57:53.089 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method deleteUserForDepartment was department-controller
+2017-04-10 15:57:53.091 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.092 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.092 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.092 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.092 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/childrenTree.com.gd.controller.department.DepartmentController.queryDepartmentChildrenTree.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.092 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/childrenTree.com.gd.controller.department.DepartmentController.queryDepartmentChildrenTree.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.094 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryDepartmentChildrenTree was department-controller
+2017-04-10 15:57:53.095 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryDepartmentChildrenTree was department-controller
+2017-04-10 15:57:53.096 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.096 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.096 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.096 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.096 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/tree.com.gd.controller.department.DepartmentController.queryDepartmentTree.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.097 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/tree.com.gd.controller.department.DepartmentController.queryDepartmentTree.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.098 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryDepartmentTree was department-controller
+2017-04-10 15:57:53.099 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryDepartmentTree was department-controller
+2017-04-10 15:57:53.101 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.101 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.101 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.101 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.101 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/departments.com.gd.controller.department.DepartmentController.resources.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.101 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/departments.com.gd.controller.department.DepartmentController.resources.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.102 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was department-controller
+2017-04-10 15:57:53.103 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was department-controller
+2017-04-10 15:57:53.105 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.105 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.105 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.105 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.105 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}.com.gd.controller.department.DepartmentController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.105 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}.com.gd.controller.department.DepartmentController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.107 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was department-controller
+2017-04-10 15:57:53.108 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was department-controller
+2017-04-10 15:57:53.109 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_4
+2017-04-10 15:57:53.110 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.110 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.110 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.110 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.110 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /department/{id}/update.com.gd.controller.department.DepartmentController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.110 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /department/{id}/update.com.gd.controller.department.DepartmentController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.112 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was department-controller
+2017-04-10 15:57:53.113 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was department-controller
+2017-04-10 15:57:53.113 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_2
+2017-04-10 15:57:53.114 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.114 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.114 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.115 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.115 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /test/hello.com.gd.controller.hello.Hello.hello.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.115 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /test/hello.com.gd.controller.hello.Hello.hello.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.115 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.115 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.116 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.116 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.116 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.116 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.117 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.117 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.117 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.118 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.118 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.118 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.119 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.119 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.119 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.119 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method hello was hello
+2017-04-10 15:57:53.120 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.120 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.120 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.120 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.120 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /test/proxy.com.gd.controller.hello.Hello.proxy.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.120 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /test/proxy.com.gd.controller.hello.Hello.proxy.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.121 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.121 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.121 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.121 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.122 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.122 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.122 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.123 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.123 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.123 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.124 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.124 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.124 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.125 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.125 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.125 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method proxy was hello
+2017-04-10 15:57:53.126 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.126 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.126 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.126 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.126 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /index/login.com.gd.controller.IndexController.index.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.126 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /index/login.com.gd.controller.IndexController.index.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.127 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.127 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.128 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.128 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.128 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.129 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.129 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.129 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.130 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.130 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.130 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.130 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.131 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.131 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.131 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.132 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method index was index-controller
+2017-04-10 15:57:53.133 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.133 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.133 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.133 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.133 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resourceAuthority/add.com.gd.controller.resource_authority.ResourceAuthorityController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.133 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resourceAuthority/add.com.gd.controller.resource_authority.ResourceAuthorityController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.134 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was resource-authority-controller
+2017-04-10 15:57:53.135 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was resource-authority-controller
+2017-04-10 15:57:53.135 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_5
+2017-04-10 15:57:53.138 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.138 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.139 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.139 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.139 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resourceAuthority/{id}/delete.com.gd.controller.resource_authority.ResourceAuthorityController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.139 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resourceAuthority/{id}/delete.com.gd.controller.resource_authority.ResourceAuthorityController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.142 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was resource-authority-controller
+2017-04-10 15:57:53.142 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was resource-authority-controller
+2017-04-10 15:57:53.143 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.143 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.143 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.143 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.144 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resourceAuthority/{id}.com.gd.controller.resource_authority.ResourceAuthorityController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.144 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resourceAuthority/{id}.com.gd.controller.resource_authority.ResourceAuthorityController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.145 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was resource-authority-controller
+2017-04-10 15:57:53.145 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was resource-authority-controller
+2017-04-10 15:57:53.145 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_5
+2017-04-10 15:57:53.146 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.147 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.147 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.147 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.147 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resource/add.com.gd.controller.resource.ResourceController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.147 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resource/add.com.gd.controller.resource.ResourceController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.149 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was resource-controller
+2017-04-10 15:57:53.149 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was resource-controller
+2017-04-10 15:57:53.150 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_6
+2017-04-10 15:57:53.151 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.151 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.151 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.151 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.151 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resource/{id}/delete.com.gd.controller.resource.ResourceController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.151 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resource/{id}/delete.com.gd.controller.resource.ResourceController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.152 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was resource-controller
+2017-04-10 15:57:53.152 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was resource-controller
+2017-04-10 15:57:53.153 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_3
+2017-04-10 15:57:53.153 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.153 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.153 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.153 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.153 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resource/resources.com.gd.controller.resource.ResourceController.resources.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.153 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resource/resources.com.gd.controller.resource.ResourceController.resources.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.154 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was resource-controller
+2017-04-10 15:57:53.154 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was resource-controller
+2017-04-10 15:57:53.155 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: resourcesUsingGET_1
+2017-04-10 15:57:53.155 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.155 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.155 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.155 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.155 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resource/{id}.com.gd.controller.resource.ResourceController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.156 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resource/{id}.com.gd.controller.resource.ResourceController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.156 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was resource-controller
+2017-04-10 15:57:53.157 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was resource-controller
+2017-04-10 15:57:53.157 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_6
+2017-04-10 15:57:53.158 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.158 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.158 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.158 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.158 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /resource/{id}/update.com.gd.controller.resource.ResourceController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.158 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /resource/{id}/update.com.gd.controller.resource.ResourceController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.159 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was resource-controller
+2017-04-10 15:57:53.160 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was resource-controller
+2017-04-10 15:57:53.160 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_3
+2017-04-10 15:57:53.161 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.161 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.161 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.161 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.161 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /roleAuthority/add.com.gd.controller.role_authority.RoleAuthorityController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.161 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /roleAuthority/add.com.gd.controller.role_authority.RoleAuthorityController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.163 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was role-authority-controller
+2017-04-10 15:57:53.163 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was role-authority-controller
+2017-04-10 15:57:53.163 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_7
+2017-04-10 15:57:53.164 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.164 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.164 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.164 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.164 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /roleAuthority/{id}/delete.com.gd.controller.role_authority.RoleAuthorityController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.164 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /roleAuthority/{id}/delete.com.gd.controller.role_authority.RoleAuthorityController.removeUserAccount.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.166 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was role-authority-controller
+2017-04-10 15:57:53.166 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method removeUserAccount was role-authority-controller
+2017-04-10 15:57:53.166 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: removeUserAccountUsingGET_1
+2017-04-10 15:57:53.167 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.167 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.167 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.167 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.167 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /roleAuthority/{id}.com.gd.controller.role_authority.RoleAuthorityController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.167 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /roleAuthority/{id}.com.gd.controller.role_authority.RoleAuthorityController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.168 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was role-authority-controller
+2017-04-10 15:57:53.169 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was role-authority-controller
+2017-04-10 15:57:53.169 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_7
+2017-04-10 15:57:53.170 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.170 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.171 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.171 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.171 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /role/add.com.gd.controller.role.RoleController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.171 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /role/add.com.gd.controller.role.RoleController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.173 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was role-controller
+2017-04-10 15:57:53.173 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was role-controller
+2017-04-10 15:57:53.173 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_8
+2017-04-10 15:57:53.174 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.174 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.174 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.174 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.174 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /role/{id}/delete.com.gd.controller.role.RoleController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.174 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /role/{id}/delete.com.gd.controller.role.RoleController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.176 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was role-controller
+2017-04-10 15:57:53.176 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was role-controller
+2017-04-10 15:57:53.176 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_4
+2017-04-10 15:57:53.177 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.177 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.177 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.177 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.177 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /role/roles.com.gd.controller.role.RoleController.resources.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.177 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /role/roles.com.gd.controller.role.RoleController.resources.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.178 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was role-controller
+2017-04-10 15:57:53.178 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method resources was role-controller
+2017-04-10 15:57:53.178 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: resourcesUsingGET_2
+2017-04-10 15:57:53.179 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.179 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.179 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.179 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.179 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /role/{id}.com.gd.controller.role.RoleController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.179 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /role/{id}.com.gd.controller.role.RoleController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.180 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was role-controller
+2017-04-10 15:57:53.181 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was role-controller
+2017-04-10 15:57:53.181 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_8
+2017-04-10 15:57:53.182 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.182 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.182 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.182 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.182 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /role/{id}/update.com.gd.controller.role.RoleController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.182 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /role/{id}/update.com.gd.controller.role.RoleController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.183 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was role-controller
+2017-04-10 15:57:53.183 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was role-controller
+2017-04-10 15:57:53.183 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_4
+2017-04-10 15:57:53.185 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.185 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.185 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.185 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.185 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/add.com.gd.controller.userinfo.UserInfoController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.185 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/add.com.gd.controller.userinfo.UserInfoController.add.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.189 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was user-info-controller
+2017-04-10 15:57:53.190 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method add was user-info-controller
+2017-04-10 15:57:53.190 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_9
+2017-04-10 15:57:53.191 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.192 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.192 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.192 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.192 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/batch/delete.com.gd.controller.userinfo.UserInfoController.batchDelete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.192 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/batch/delete.com.gd.controller.userinfo.UserInfoController.batchDelete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.194 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method batchDelete was user-info-controller
+2017-04-10 15:57:53.195 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method batchDelete was user-info-controller
+2017-04-10 15:57:53.196 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.196 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.196 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.196 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.196 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}/delete.com.gd.controller.userinfo.UserInfoController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.196 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}/delete.com.gd.controller.userinfo.UserInfoController.delete.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.198 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was user-info-controller
+2017-04-10 15:57:53.199 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method delete was user-info-controller
+2017-04-10 15:57:53.199 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingGET_5
+2017-04-10 15:57:53.200 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.200 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.201 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.201 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.201 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}/exitDepartment.com.gd.controller.userinfo.UserInfoController.exitDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.201 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}/exitDepartment.com.gd.controller.userinfo.UserInfoController.exitDepartment.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.203 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method exitDepartment was user-info-controller
+2017-04-10 15:57:53.204 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method exitDepartment was user-info-controller
+2017-04-10 15:57:53.205 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.205 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.205 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.205 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.206 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}/friend.com.gd.controller.userinfo.UserInfoController.findUserFriend.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.206 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}/friend.com.gd.controller.userinfo.UserInfoController.findUserFriend.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.208 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method findUserFriend was user-info-controller
+2017-04-10 15:57:53.208 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method findUserFriend was user-info-controller
+2017-04-10 15:57:53.209 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.210 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.210 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.210 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.210 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}/rootDepartment.com.gd.controller.userinfo.UserInfoController.queryRootDepartmentForUser.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.210 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}/rootDepartment.com.gd.controller.userinfo.UserInfoController.queryRootDepartmentForUser.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.212 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryRootDepartmentForUser was user-info-controller
+2017-04-10 15:57:53.212 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method queryRootDepartmentForUser was user-info-controller
+2017-04-10 15:57:53.214 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.214 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.214 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.214 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.214 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}.com.gd.controller.userinfo.UserInfoController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.214 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}.com.gd.controller.userinfo.UserInfoController.show.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.216 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was user-info-controller
+2017-04-10 15:57:53.217 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method show was user-info-controller
+2017-04-10 15:57:53.217 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: showUsingGET_9
+2017-04-10 15:57:53.218 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.218 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.218 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.218 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.218 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}/accounts.com.gd.controller.userinfo.UserInfoController.showAccountsById.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.218 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}/accounts.com.gd.controller.userinfo.UserInfoController.showAccountsById.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.220 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method showAccountsById was user-info-controller
+2017-04-10 15:57:53.221 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method showAccountsById was user-info-controller
+2017-04-10 15:57:53.222 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.222 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.222 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.222 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.222 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/{id}/update.com.gd.controller.userinfo.UserInfoController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.222 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/{id}/update.com.gd.controller.userinfo.UserInfoController.update.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.224 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was user-info-controller
+2017-04-10 15:57:53.225 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method update was user-info-controller
+2017-04-10 15:57:53.225 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPOST_5
+2017-04-10 15:57:53.226 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.226 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache models with key java.lang.String(true)
+2017-04-10 15:57:53.226 [main] INFO  s.documentation.schema.ModelContextKeyGenerator - Cache Key Generated: java.lang.String(true)
+2017-04-10 15:57:53.226 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2017-04-10 15:57:53.226 [main] INFO  s.documentation.spring.web.OperationsKeyGenerator - Cache key generated: /userinfo/userinfos.com.gd.controller.userinfo.UserInfoController.userinfos.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.226 [main] INFO  s.documentation.spring.web.caching.CachingAspect - Caching aspect applied for cache operations with key /userinfo/userinfos.com.gd.controller.userinfo.UserInfoController.userinfos.DefaultGenericTypeNamingStrategy
+2017-04-10 15:57:53.228 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method userinfos was user-info-controller
+2017-04-10 15:57:53.228 [main] INFO  s.d.s.web.ClassOrApiAnnotationResourceGrouping - Group for method userinfos was user-info-controller
+2017-04-10 15:57:53.229 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: userinfosUsingGET_1
+2017-04-10 15:57:53.272 [main] INFO  application - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-04-10 15:57:53.272 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2017-04-10 15:57:53.302 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2017-04-10 15:57:53.334 [main] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1bbf9978{HTTP/1.1,[http/1.1]}{0.0.0.0:9090}
+2017-04-10 15:57:53.336 [main] INFO  o.s.b.c.e.jetty.JettyEmbeddedServletContainer - Jetty started on port(s) 9090 (http/1.1)
+2017-04-10 15:57:53.342 [main] INFO  com.gd.MaApplication - Started MaApplication in 11.663 seconds (JVM running for 12.028)
+2017-04-10 16:00:32.811 [qtp1871617286-25] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2017-04-10 16:00:32.819 [qtp1871617286-25] DEBUG c.g.d.r.I.removeResourceForAuthority - ==>  Preparing: DELETE FROM sys_resource_authority where authorityId = ? AND resourceId IN ( ? , ? ) 
+2017-04-10 16:00:32.861 [qtp1871617286-25] DEBUG c.g.d.r.I.removeResourceForAuthority - ==> Parameters: 1(String), 1(String), 3(String)
+2017-04-10 16:00:32.912 [qtp1871617286-25] DEBUG c.g.d.r.I.removeResourceForAuthority - <==    Updates: 4

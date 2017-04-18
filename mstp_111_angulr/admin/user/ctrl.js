@@ -6,8 +6,8 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http, Ba
     let username = "Lion_account";
     let password = "111111";
     let tok = username + ':' + password;
-    // let authdata = Base64.encode(username + ':' + password);
-    let authdata = "Basic" + Base64.encode(tok);
+    let authdata = "Basic"+Base64.encode(username + ':' + password);
+    // let authdata = "Basic" + Base64.encode(tok);
 
     // $.ajax({
     //     // type:'get',
@@ -28,14 +28,24 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http, Ba
     //     }
     // });
 
-    $http.get($scope.app.host + "/userinfo/userinfos",{
-         withCredentials:true
+    // $http.get($scope.app.host + "/userinfo/userinfos",
+    //
+    // ).success(function (data) {
+    //     // $scope.test = JSON.toJSON(data);
+    //     // $scope.users = JSON.parse(data);
+    //     $scope.haha = data.data;
+    //     // $scope.$apply();
+    // });
+
+// 'Basic TGlvbl9hY2NvdW50OjExMTExMQ=='
+    $http({
+        url: $scope.app.host + "/userinfo/userinfos",
+        method:'GET',
+        headers:{'Authorization':authdata}
     }).success(function (data) {
-        // $scope.test = JSON.toJSON(data);
-        // $scope.users = JSON.parse(data);
         $scope.haha = data.data;
-        // $scope.$apply();
     });
+
 
     $scope.delete = function (id) {
         //弹出删除确认

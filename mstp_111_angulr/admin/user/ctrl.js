@@ -1,13 +1,13 @@
 'use strict';
 
-app.controller('ListController', function ($rootScope, $scope, $modal, $http, Base64) {
+app.controller('ListController', function ($rootScope, $scope, $modal, $http, Base64, BasicAuth) {
     $scope.users = {};
     $scope.haha = {};
     let username = "Lion_account";
     let password = "111111";
     let tok = username + ':' + password;
-    let authdata = "Basic"+Base64.encode(username + ':' + password);
-    // let authdata = "Basic" + Base64.encode(tok);
+    let authdata = "Basic "+Base64.encode(username + ':' + password);
+    // let authdata = "Basic" + atob(tok);
 
     // $.ajax({
     //     // type:'get',
@@ -41,7 +41,7 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http, Ba
     $http({
         url: $scope.app.host + "/userinfo/userinfos",
         method:'GET',
-        headers:{'Authorization':authdata}
+        headers:{'Authorization':BasicAuth.Data}
     }).success(function (data) {
         $scope.haha = data.data;
     });
@@ -139,7 +139,8 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
 }]);
 
 
-app.controller('DetailController', function ($rootScope, $scope, $resource, $stateParams, $state) {
+app.controller('DetailController', function ($rootScope, $scope,
+            $resource, $stateParams, $state, $http, BasicAuth) {
     $scope.edit_mode = !!$stateParams.id;
     if ($scope.edit_mode) {
         $.ajax({
@@ -169,24 +170,35 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
             })
         }
         else {
-            $.ajax({
-                type: 'post',
-                url: $scope.app.host + "/userinfo/add",
-                data: $scope.userInfo,
-                success: function (data) {
-                    $state.go('app.user.list');
-                }
-            })
+            let dd = JSON.stringify($scope.userInfo);
 
+            let postData = {realName:'test', gender:'s'};
+
+            // $.ajax({
+            //     type: 'post',
+            //     url: $scope.app.host + "/userinfo/add",
+            //     data: postData,
+            //     success: function (data) {
+            //         $state.go('app.user.list');
+            //     }
+            // });
+
+
+            $http({
+                url:$scope.app.host + "/userinfo/add",
+                method:'POST',
+                data:$scope.userInfo,
+                 headers:{'Authorization':BasicAuth.Data}
+                      // 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+                // transformRequest: transform
+            }).success(function () {
+                $state.go('app.user.list');
+            });
         }
     };
 });
-
-app.factory('Base64', function () {
-    /* jshint ignore:start */
-
+app.factory('Base64',function(){
     var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-
     return {
         encode: function (input) {
             var output = "";
@@ -266,4 +278,15 @@ app.factory('Base64', function () {
     };
 });
 
+// 通过factory来在不同的controller之间传递参数
+app.factory('BasicAuth', function (Base64) {
+    let username = "Lion_account";
+    let password = "111111";
+    let tok = username + ':' + password;
+    let authdata = "Basic "+Base64.encode(username + ':' + password);
+    // let authdata = "Basic" + atob(tok);
 
+    return{
+        Data:authdata
+    }
+});

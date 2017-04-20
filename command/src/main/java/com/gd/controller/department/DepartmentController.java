@@ -212,6 +212,31 @@ public class DepartmentController {
         }
         return gson.toJson(resultMap);
     }
+    @RequestMapping(value = "/{id}/deleteUser",method = RequestMethod.POST)
+    @ApiOperation(value = "移除部门成员",httpMethod = "POST",notes = "移除部门成员")
+    //id:部门id；userIds:人员id字符串，以逗号分隔
+    public String deleteUserForDepartment(HttpServletRequest request,HttpServletResponse response,@PathVariable String id,@RequestParam String userIds){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","POST"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String, Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+
+        String resultSuccess = "success";
+        String resultCode = "0000";
+        try {
+            for(String s:userIds.split(",")){
+                this.departmentService.deleteUserForDepartment(id,s);
+            }
+        }catch (Exception e){
+            resultCode="0001";
+            resultSuccess="faild";
+        }finally {
+            resultMap.put("code", resultCode);
+            resultMap.put("data", resultSuccess);
+        }
+        return gson.toJson(resultMap);
+    }
     @RequestMapping(value = "/{id}/addSuperiorDepartment",method = RequestMethod.GET)
     @ApiOperation(value = "为部门分配上级部门",httpMethod = "GET",notes = "为部门分配上级部门")
     public String addSuperiorDepartment(HttpServletRequest request,HttpServletResponse response,@PathVariable String id,@RequestParam String parentId){

@@ -153,7 +153,33 @@ public class UserInfoController {
         }
         return gson.toJson(resultMap);
     }
-
+    @RequestMapping(value = "/batch/delete",method = RequestMethod.GET)
+    // @RequestLimit(count = 1,limitTime = 2000)
+    // @Log(name = "删除用户信息")
+    @ApiOperation(value = "批量删除用户信息", httpMethod = "GET", notes = "批量删除用户信息")
+    public String batchDelete(Principal principal,HttpServletRequest request,HttpServletResponse response,@RequestParam String ids){
+        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+        Map<String,Object> resultMap = new HashMap<>();
+        Gson gson = new Gson();
+        List<String> listIds = new ArrayList<String>();
+        for(String s:ids.split(",")){
+            listIds.add(s);
+        }
+        String resultSuccess = "success";
+        String resultCode = "0000";
+        try {
+            this.userInfoService.batchDeleteObject(listIds);
+        }catch (Exception e){
+            resultCode="0001";
+            resultSuccess="faild";
+        }finally {
+            resultMap.put("code", resultCode);
+            resultMap.put("data", resultSuccess);
+        }
+        return gson.toJson(resultMap);
+    }
     @RequestMapping(value = "/{id}/accounts",method = RequestMethod.GET)
     // @RequestLimit(count = 1,limitTime = 2000)
     //@Log(name = "查看用户信息")

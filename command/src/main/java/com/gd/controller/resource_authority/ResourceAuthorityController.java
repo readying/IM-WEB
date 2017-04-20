@@ -70,14 +70,14 @@ public class ResourceAuthorityController {
         }
         return gson.toJson(resultMap);
     }
-    @RequestMapping(value = "/{id}/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/{id}/delete", method = RequestMethod.GET)
     // @RequestLimit(count = 1,limitTime = 2000)
     // @Log(name = "移除权限资源信息")
-    @ApiOperation(value = "移除权限资源信息", httpMethod = "POST", notes = "移除权限资源信息")
+    @ApiOperation(value = "移除权限资源信息", httpMethod = "GET", notes = "移除权限资源信息")
     //需要的参数，id：权限id，roleIds：资源id字符串，以逗号分隔
     public String removeUserAccount(HttpServletRequest request, HttpServletResponse response, @PathVariable String id, @RequestParam String resourceIds){
         response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
-        response.setHeader("Access-Control-Allow-Methods","POST"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
         response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
         Map<String, Object> resultMap = new HashMap<>();
         List<String> resourceIdsList = new ArrayList<>();

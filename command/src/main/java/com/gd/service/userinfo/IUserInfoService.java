@@ -15,6 +15,8 @@ public interface IUserInfoService {
     void insertForObject(BaseModel baseModel);
     void updateForObject(BaseModel baseModel);
     void deleteForObject(BaseModel baseModel);
+    //批量删除用户
+    void batchDeleteObject(List<String> listIds);
     UserInfo queryForObjectById(String id);
     List<Account> queryAccountForObjectById(String id);
     //用户退出部门

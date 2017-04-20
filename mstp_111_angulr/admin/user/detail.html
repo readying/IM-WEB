@@ -21,10 +21,22 @@
                             <label class="col-sm-2 control-label">姓名</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control"
-                                       ng-model="userInfo.realName" name="realName" required>
-                                <span class="error" ng-show="CreateUserForm.realName.$error.required">
-                                    请输入用户名
-                                </span>
+                                       ng-model="userInfo.realName" name="realName"
+                                       data-ng-minlength="4"
+                                       data-ng-maxlength="10"
+                                       required>
+                                <div style="color:red" class="error"
+                                     ng-show="CreateUserForm.realName.$dirty ">
+                                    <p ng-show="CreateUserForm.realName.$error.minlength">用户名太短了</p>
+                                    <p ng-show="CreateUserForm.realName.$error.maxlength">用户名太长了</p>
+                                    <p ng-show="CreateUserForm.realName.$error.required">必填</p>
+                                </div>
+
+
+
+                                <!--<span class="error" ng-show="CreateUserForm.realName.$error.required">-->
+                                    <!--请输入用户名-->
+                                <!--</span>-->
                             </div>
 
                         </div>
@@ -32,8 +44,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">电话</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" ng-model="userInfo.phone"
-                                ng-minlength="5">
+                                <input type="text" class="form-control" ng-pattern="[a-zA-Z]" />
                             </div>
                         </div>
                         <div class="line line-dashed b-b line-lg pull-in"></div>

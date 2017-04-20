@@ -1,26 +1,60 @@
 'use strict';
 
-app.controller('ListController', function ($rootScope, $scope, $modal, $http) {
+app.controller('ListController', function ($rootScope, $scope, $modal, $http, Base64) {
     $scope.users = {};
     $scope.haha = {};
-    $.ajax({
-        type:'get',
-        url:$scope.app.host + "/userinfo/userinfos",
-        success:function (data) {
-            $scope.users =JSON.parse(data);
-            $scope.haha =  $scope.users.data;
-            $scope.$apply();
-        }
+    let username = "Lion_account";
+    let password = "111111";
+    let tok = username + ':' + password;
+    let authdata = "Basic"+Base64.encode(username + ':' + password);
+    // let authdata = "Basic" + Base64.encode(tok);
+
+    // $.ajax({
+    //     // type:'get',
+    //     url:$scope.app.host + "/userinfo/userinfos",
+    //     method:'GET',
+    //     beforeSend:function (req) {
+    //         req.setRequestHeader('Authorization', authdata);
+    //     },
+    //     // header:{
+    //     //     "Authorization":"Basic"+authdata
+    //     // },
+    //     // username:"Lion_account",
+    //     // password:"111111",
+    //     success:function (data) {
+    //         $scope.users =JSON.parse(data);
+    //         $scope.haha =  $scope.users.data;
+    //         $scope.$apply();
+    //     }
+    // });
+
+    // $http.get($scope.app.host + "/userinfo/userinfos",
+    //
+    // ).success(function (data) {
+    //     // $scope.test = JSON.toJSON(data);
+    //     // $scope.users = JSON.parse(data);
+    //     $scope.haha = data.data;
+    //     // $scope.$apply();
+    // });
+
+// 'Basic TGlvbl9hY2NvdW50OjExMTExMQ=='
+    $http({
+        url: $scope.app.host + "/userinfo/userinfos",
+        method:'GET',
+        headers:{'Authorization':authdata}
+    }).success(function (data) {
+        $scope.haha = data.data;
     });
+
 
     $scope.delete = function (id) {
         //弹出删除确认
-        var modalInstance = $modal.open({
-            templateUrl: 'admin/confirm.html',
-            controller: 'ConfirmController',
+        var modalinstance = $modal.open({
+            templateurl: 'admin/confirm.html',
+            controller: 'confirmcontroller',
             size: 'sm',
         });
-        modalInstance.result.then(function () {
+        modalinstance.result.then(function () {
             $.ajax({
                 type: 'get',
                 url: $scope.app.host + "/userinfo/" + id.id + "/delete",
@@ -33,8 +67,8 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http) {
     };
 
     $scope.account = function (id) {
-        var _scope = $rootScope.$new();
-        _scope.data = {
+        var scope = $rootScope.$new();
+        scope.data = {
             userid: id.id,
             app: $scope.app
         }
@@ -42,7 +76,7 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http) {
         var modalInstance = $modal.open({
             templateUrl: 'admin/user/account.html',
             controller: 'AccountController',
-            scope: _scope
+            scope: scope
         });
         modalInstance.result.then(function () {
         });
@@ -64,7 +98,6 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
 
     console.log(data.userid);
 
-
     //多选框所有角色信息
     $.ajax({
         type: 'get',
@@ -73,7 +106,6 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
             $scope.roles = JSON.parse(data);
             $scope.roleList = $scope.roles.data;
             $scope.$apply();
-
         }
     });
 
@@ -82,20 +114,20 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
         type: 'get',
         url: data.app.host + "/userinfo/" + data.userid + "/accounts",
         success: function (data) {
-            $scope.list = JSON.parse(data);
+            $scope.accountlist = JSON.parse(data);
+            $scope.list = $scope.accountlist.data;
             $scope.$apply();
         }
     });
 
-
     $scope.add = function () {
         var obj = {userName: '', userinfoAccountRoleList: {}};
         $scope.list.push(obj);
-    }
+    };
 
     $scope.del = function (idx) {
         $scope.list.splice(idx, 1);
-    }
+    };
 
     $scope.ok = function () {
         alert($scope.list);
@@ -114,7 +146,8 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
             type: 'get',
             url: $scope.app.host + "/userinfo/" + $stateParams.id,
             success: function (data) {
-                $scope.userInfo = JSON.parse(data);
+                let obj = JSON.parse(data);
+                $scope.userInfo = obj.data;
                 $scope.$apply();
             }
         })
@@ -135,7 +168,6 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
                 }
             })
         }
-
         else {
             $.ajax({
                 type: 'post',
@@ -148,8 +180,90 @@ app.controller('DetailController', function ($rootScope, $scope, $resource, $sta
 
         }
     };
+});
 
+app.factory('Base64', function () {
+    /* jshint ignore:start */
 
+    var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+    return {
+        encode: function (input) {
+            var output = "";
+            var chr1, chr2, chr3 = "";
+            var enc1, enc2, enc3, enc4 = "";
+            var i = 0;
+
+            do {
+                chr1 = input.charCodeAt(i++);
+                chr2 = input.charCodeAt(i++);
+                chr3 = input.charCodeAt(i++);
+
+                enc1 = chr1 >> 2;
+                enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+                enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+                enc4 = chr3 & 63;
+
+                if (isNaN(chr2)) {
+                    enc3 = enc4 = 64;
+                } else if (isNaN(chr3)) {
+                    enc4 = 64;
+                }
+
+                output = output +
+                    keyStr.charAt(enc1) +
+                    keyStr.charAt(enc2) +
+                    keyStr.charAt(enc3) +
+                    keyStr.charAt(enc4);
+                chr1 = chr2 = chr3 = "";
+                enc1 = enc2 = enc3 = enc4 = "";
+            } while (i < input.length);
+
+            return output;
+        },
+
+        decode: function (input) {
+            var output = "";
+            var chr1, chr2, chr3 = "";
+            var enc1, enc2, enc3, enc4 = "";
+            var i = 0;
+
+            // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
+            var base64test = /[^A-Za-z0-9\+\/\=]/g;
+            if (base64test.exec(input)) {
+                window.alert("There were invalid base64 characters in the input text.\n" +
+                    "Valid base64 characters are A-Z, a-z, 0-9, '+', '/',and '='\n" +
+                    "Expect errors in decoding.");
+            }
+            input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+            do {
+                enc1 = keyStr.indexOf(input.charAt(i++));
+                enc2 = keyStr.indexOf(input.charAt(i++));
+                enc3 = keyStr.indexOf(input.charAt(i++));
+                enc4 = keyStr.indexOf(input.charAt(i++));
+
+                chr1 = (enc1 << 2) | (enc2 >> 4);
+                chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                chr3 = ((enc3 & 3) << 6) | enc4;
+
+                output = output + String.fromCharCode(chr1);
+
+                if (enc3 != 64) {
+                    output = output + String.fromCharCode(chr2);
+                }
+                if (enc4 != 64) {
+                    output = output + String.fromCharCode(chr3);
+                }
+
+                chr1 = chr2 = chr3 = "";
+                enc1 = enc2 = enc3 = enc4 = "";
+
+            } while (i < input.length);
+
+            return output;
+        }
+    };
 });
 
 

@@ -49,12 +49,12 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http, Ba
 
     $scope.delete = function (id) {
         //弹出删除确认
-        var modalinstance = $modal.open({
-            templateurl: 'admin/confirm.html',
-            controller: 'confirmcontroller',
+        var modalInstance = $modal.open({
+            templateUrl: 'admin/confirm.html',
+            controller: 'ConfirmController',
             size: 'sm',
         });
-        modalinstance.result.then(function () {
+        modalInstance.result.then(function () {
             $.ajax({
                 type: 'get',
                 url: $scope.app.host + "/userinfo/" + id.id + "/delete",

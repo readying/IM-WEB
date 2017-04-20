@@ -43,7 +43,8 @@
         <connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
             <dataSource class="com.alibaba.druid.pool.DruidDataSourceC3P0Adapter">
                 <driverClass>com.mysql.jdbc.Driver</driverClass>
-                <jdbcUrl>jdbc:mysql://192.168.5.157/cmd?characterEncoding=UTF-8&amp;autoReconnect=true&amp;useSSL=false</jdbcUrl>
+                <!--<jdbcUrl>jdbc:mysql://192.168.5.157/cmd?characterEncoding=UTF-8&amp;autoReconnect=true&amp;useSSL=false</jdbcUrl>-->
+                <jdbcUrl>jdbc:mysql://192.168.6.70/cmd?characterEncoding=UTF-8&amp;autoReconnect=true&amp;useSSL=false</jdbcUrl>
                 <user>root</user>
                 <password>root</password>
             </dataSource>

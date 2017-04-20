@@ -56,6 +56,12 @@
             <version>1.1.43</version>
         </dependency>
         <!--fastjson-->
+        <!-- ftp服务器 -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
         <!--闆嗘垚spring security-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

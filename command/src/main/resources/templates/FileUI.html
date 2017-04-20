@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>ftp文件上传界面</h1>
+<form action="/v1.0/ma/file/fileOrImageUpload" method="POST" enctype="multipart/form-data">
+    id:<input type="text" name="id" /><br/>
+    文件：<input type="file" name="file"/>
+    <input type="submit" />
+</form>
+<a href="/v1.0/ma/file/showImage?id=a07a2957-0812-11e7-befe-7c6896b5c9d2">查看a07a2957-0812-11e7-befe-7c6896b5c9d2头像</a>
+</body>
+</html>

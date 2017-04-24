@@ -75,11 +75,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     这个configure就是验证账户的权限和当前url所需要的权限是否匹配
     注入的mySecurityMetadataSource：在security文件夹下，查询当前访问的url所需要的全部权限
     注入的accessDecisionManager：在后面定义的，返回时security文件夹下就MyAccessDecisionManager，检验用户的权限是否满足当前url权限
-    注入的authentcationManagerBean：在后面定义，是重写的方法
+    注入的authentcationManagerBean：在后面定义，是重写的方法[-
      */
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("*").permitAll();
-       /*//这里的定义为任何请求都要拦截，经过自定义的ObjectPostProcessor
+
+//        /*
+        //这里的定义为任何请求都要拦截，经过自定义的ObjectPostProcessor
         http.authorizeRequests().anyRequest().authenticated().withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
             public <O extends FilterSecurityInterceptor> O postProcess(O fsi) {
                 fsi.setSecurityMetadataSource(mySecurityMetadataSource);
@@ -91,7 +93,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //然后定义匿名不允许，Basic提交需要验证，使用的注入为security文件夹下的CustomBasicAuthenticationEntryPoint文件
         http.anonymous().disable();
         http.authorizeRequests().anyRequest().authenticated().expressionHandler(webSecurityExpressionHandler()).and().httpBasic().realmName(REALM).authenticationEntryPoint(getBasicAuthentryPoint());
-       */http.csrf().disable();
+
+//        */
+
+        http.csrf().disable();
         //http.regexMatcher("/pc").formLogin().loginPage("/login.html");
     }
 

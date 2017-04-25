@@ -6,7 +6,7 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http, Ba
     let username = "Lion_account";
     let password = "111111";
     let tok = username + ':' + password;
-    let authdata = "Basic "+Base64.encode(username + ':' + password);
+    let authdata = "Basic " + Base64.encode(username + ':' + password);
     // let authdata = "Basic" + atob(tok);
 
     // $.ajax({
@@ -40,9 +40,11 @@ app.controller('ListController', function ($rootScope, $scope, $modal, $http, Ba
 // 'Basic TGlvbl9hY2NvdW50OjExMTExMQ=='
     $http({
         url: $scope.app.host + "/userinfo/userinfos",
-        method:'GET',
-        headers:{'Authorization':BasicAuth.Data}
+        method: 'GET',
+        headers: {'Authorization': BasicAuth.Data}
     }).success(function (data) {
+        // $scope.users = JSON.stringify(data);
+        // $scope.haha = $scope.users.data;
         $scope.haha = data.data;
     });
 
@@ -140,7 +142,7 @@ app.controller('AccountController', ['$scope', '$modalInstance', function ($scop
 
 
 app.controller('DetailController', function ($rootScope, $scope,
-            $resource, $stateParams, $state, $http, BasicAuth) {
+                                             $resource, $stateParams, $state, $http, BasicAuth) {
     $scope.edit_mode = !!$stateParams.id;
     if ($scope.edit_mode) {
         $.ajax({
@@ -172,7 +174,7 @@ app.controller('DetailController', function ($rootScope, $scope,
         else {
             let dd = JSON.stringify($scope.userInfo);
 
-            let postData = {realName:'test', gender:'s'};
+            let postData = {realName: 'test', gender: 's'};
 
             // $.ajax({
             //     type: 'post',
@@ -185,11 +187,11 @@ app.controller('DetailController', function ($rootScope, $scope,
 
 
             $http({
-                url:$scope.app.host + "/userinfo/add",
-                method:'POST',
-                data:$scope.userInfo,
-                 headers:{'Authorization':BasicAuth.Data}
-                      // 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+                url: $scope.app.host + "/userinfo/add",
+                method: 'POST',
+                data: $scope.userInfo,
+                headers: {'Authorization': BasicAuth.Data}
+                // 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
                 // transformRequest: transform
             }).success(function () {
                 $state.go('app.user.list');
@@ -197,7 +199,7 @@ app.controller('DetailController', function ($rootScope, $scope,
         }
     };
 });
-app.factory('Base64',function(){
+app.factory('Base64', function () {
     var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
     return {
         encode: function (input) {
@@ -283,10 +285,10 @@ app.factory('BasicAuth', function (Base64) {
     let username = "Lion_account";
     let password = "111111";
     let tok = username + ':' + password;
-    let authdata = "Basic "+Base64.encode(username + ':' + password);
+    let authdata = "Basic " + Base64.encode(username + ':' + password);
     // let authdata = "Basic" + atob(tok);
 
-    return{
-        Data:authdata
+    return {
+        Data: authdata
     }
 });

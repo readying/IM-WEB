@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class DepartmentTreeJson {
     private String id;
-    private String nodeName;
+    private String name;
     private List<DepartmentTreeJson> children;
 
     public DepartmentTreeJson() {
@@ -15,7 +15,7 @@ public class DepartmentTreeJson {
 
     public DepartmentTreeJson(String id, String nodeName, List<DepartmentTreeJson> children) {
         this.id = id;
-        this.nodeName = nodeName;
+        this.name = nodeName;
         this.children = children;
     }
 
@@ -24,7 +24,7 @@ public class DepartmentTreeJson {
     }
 
     public void setNodeName(String nodeName) {
-        this.nodeName = nodeName;
+        this.name = nodeName;
     }
 
     public void setChildren(List<DepartmentTreeJson> children) {
@@ -37,7 +37,7 @@ public class DepartmentTreeJson {
     }
 
     public String getNodeName() {
-        return nodeName;
+        return name;
     }
 
     public List<DepartmentTreeJson> getChildren() {

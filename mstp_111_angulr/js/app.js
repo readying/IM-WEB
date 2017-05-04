@@ -16,7 +16,8 @@ angular.module('app', [
     'ui.validate',
     'oc.lazyLoad',
     'pascalprecht.translate',
-    'ncy-angular-breadcrumb'
+    'ncy-angular-breadcrumb',
+    'treeGrid'
     ]);
 
 

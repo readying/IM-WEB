@@ -1,42 +1,42 @@
 'use strict';
 
 angular.module('app')
-    .run(
-        function ($rootScope,   $state,   $stateParams,$localStorage,$http) {
-            $http.defaults.headers.common['Authorization'] = 'Basic ' + $localStorage.auth;
-            $rootScope.$state = $state;
-            $rootScope.$stateParams = $stateParams;
-            $rootScope.$on('$stateChangeSuccess', function(event, to, toParams, from, fromParams) {
-                $rootScope.previousState = from;
-                $rootScope.previousStateParams = fromParams;
-            });
-        }
-    )
+    // .run(
+    //     function ($rootScope,   $state,   $stateParams,$localStorage,$http) {
+    //         $http.defaults.headers.common['Authorization'] = 'Basic ' + $localStorage.auth;
+    //         $rootScope.$state = $state;
+    //         $rootScope.$stateParams = $stateParams;
+    //         $rootScope.$on('$stateChangeSuccess', function(event, to, toParams, from, fromParams) {
+    //             $rootScope.previousState = from;
+    //             $rootScope.previousStateParams = fromParams;
+    //         });
+    //     }
+    // )
     .config(
         function ($stateProvider,   $urlRouterProvider) {
             $urlRouterProvider
-                .otherwise('/auth/loading');
+                // .otherwise('/auth/loading');
+            .otherwise('/app/user/list');
             $stateProvider
-                .state('auth',{
-                    abstract: true,
-                    url:'/auth',
-                    template: '<div ui-view class="fade-in"></div>',
-                    resolve: {
-                        deps: ['$ocLazyLoad',
-                            function( $ocLazyLoad ){
-                                return $ocLazyLoad.load('admin/auth/ctrl.js');
-                            }]
-                    }
-                })
-                .state('auth.loading',{
-                    url:'/loading',
-                    templateUrl:'admin/auth/loading.html',
-                })
-                .state('auth.login',{
-                    url:'/login',
-                    templateUrl:'admin/auth/login.html',
-                })
-
+                // .state('auth',{
+                //     abstract: true,
+                //     url:'/auth',
+                //     template: '<div ui-view class="fade-in"></div>',
+                //     resolve: {
+                //         deps: ['$ocLazyLoad',
+                //             function( $ocLazyLoad ){
+                //                 return $ocLazyLoad.load('admin/auth/ctrl.js');
+                //             }]
+                //     }
+                // })
+                // .state('auth.loading',{
+                //     url:'/loading',
+                //     templateUrl:'admin/auth/loading.html',
+                // })
+                // .state('auth.login',{
+                //     url:'/login',
+                //     templateUrl:'admin/auth/login.html',
+                // })
                 .state('app', {
                     abstract: true,
                     url: '/app',
@@ -56,9 +56,7 @@ angular.module('app')
                     resolve: {
                         deps: ['$ocLazyLoad',
                             function( $ocLazyLoad ){
-
                                 return $ocLazyLoad.load('admin/user/ctrl.js');
-
                             }]
                     }
                 })
@@ -166,6 +164,25 @@ angular.module('app')
                     ncyBreadcrumb:{
                         parent:'app.authority.list',
                         label:'新增'
+                    }
+                })
+                .state('app.framework',{
+                    abstract:true,
+                    url:'/framework',
+                    template:'<div ui-view class="fade-in"></div>',
+                    resolve:{
+                        deps:['$ocLazyLoad',
+                            function ($ocLazyLoad) {
+                                return $ocLazyLoad.load('admin/framework/ctrl.js')
+                            }]
+                    }
+                })
+                .state('app.framework.list',{
+                    url:'/list',
+                    templateUrl:'admin/framework/list.html',
+                    ncyBreadcrumb:{
+                        parent:'app.framework',
+                        label:'权限列表'
                     }
                 })
 

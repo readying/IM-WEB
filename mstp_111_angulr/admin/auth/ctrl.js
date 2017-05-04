@@ -11,7 +11,7 @@ app.controller('LoginController',function($scope,$state,$http,$resource,Base64,$
     $scope.login = function(){
         $scope.authError = "";
         var authdata = Base64.encode($scope.user.username + ':' + $scope.user.password);
-        $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
+        // $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata;
         var $com = $resource($scope.app.host + "/auth/info/?");
         $com.get(function(data){
             $scope.session_user = $localStorage.user = data;

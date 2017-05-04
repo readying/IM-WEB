@@ -7,15 +7,22 @@ app.controller('ResourceListController', function($scope,$modal, $http) {
 
     $scope.currentResource = {};
 
-        $.ajax({
-            type:'get',
+        // $.ajax({
+        //     type:'get',
+        //     url:$scope.app.host + "/resource/resources",
+        //     success:function (data) {
+        //         var obj = JSON.parse(data);
+        //         $scope.users = obj;
+        //         $scope.haha =  $scope.users.data;
+        //         $scope.$apply();
+        //     }
+        // });
+
+        $http({
             url:$scope.app.host + "/resource/resources",
-            success:function (data) {
-                var obj = JSON.parse(data);
-                $scope.users = obj;
-                $scope.haha =  $scope.users.data;
-                $scope.$apply();
-            }
+            method:'GET'
+        }).success(function (data) {
+            $scope.haha = data.data;
         });
 
 

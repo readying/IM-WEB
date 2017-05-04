@@ -6,11 +6,26 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="lib/angular/angular.js"></script>
+
+    <script>
+        function openWindow()
+        {
+            var b = confirm("是否打开对话框");
+       if(b)
+       { var c = prompt("请输入你要打开的网址：", "http：//www.imooc.com/");
+           window.open("http：//www.imooc.com/", "width=400,height=500,menubar=no,toolbar=no");
+       }
+        }
+    </script>
 </head>
 <body>
-<p>Nothing here {{'yet' + '!'}}</p>
-<a href="http://127.0.0.1:9090/ma/userinfo/userinfos">hh</a>
+<input type="button" value="新窗口打开网站" onclick="openWindow()" />
 </body>
-</html>
 
+<!--</head>-->
+<!--<body>-->
+<!--<p>Nothing here {{'yet' + '!'}}</p>-->
+<!--<a href="http://127.0.0.1:9090/ma/userinfo/userinfos">hh</a>-->
+<!--</body>-->
+</html>
 

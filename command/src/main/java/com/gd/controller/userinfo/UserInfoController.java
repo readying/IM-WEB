@@ -39,9 +39,9 @@ public class UserInfoController {
     //@Log(name = "获取所有用户信息")
     @ApiOperation(value = "获取所有用户信息", httpMethod = "GET", notes = "获取全部用户信息")
     public String userinfos(Principal principal, HttpServletRequest request, HttpServletResponse response){
-        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
-        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
-        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
+//        response.setHeader("Access-Control-Allow-Origin", "*"); //允许哪些url可以跨域请求到本域
+//        response.setHeader("Access-Control-Allow-Methods","GET"); //允许的请求方法，一般是GET,POST,PUT,DELETE,OPTIONS
+//        response.setHeader("Access-Control-Allow-Headers","x-requested-with,content-type"); //允许哪些请求头可以跨域
 //        boolean flag = validateAccount(principal);
         Map<String, Object> resultMap = new HashMap<>();
         Gson gson = new Gson();
